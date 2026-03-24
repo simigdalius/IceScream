@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://cpjco5cvgq283"]
+
+[ext_resource type="Script" uid="uid://bktbhod5xsv4n" path="res://game/background.gd" id="1_q7gnx"]
+[ext_resource type="PackedScene" uid="uid://dtegkvmsycaqn" path="res://game/target.tscn" id="1_ss1cv"]
+[ext_resource type="PackedScene" uid="uid://d3qtm72c4pxg" path="res://game/spawner.tscn" id="2_rotdt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ut7ke"]
+size = Vector2(1152, 637)
+
+[node name="Node2D" type="Node2D" unique_id=1720646014]
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1488605819]
+script = ExtResource("1_q7gnx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=470503592]
+position = Vector2(576, 321.5)
+shape = SubResource("RectangleShape2D_ut7ke")
+
+[node name="target" parent="." unique_id=1659349752 instance=ExtResource("1_ss1cv")]
+
+[node name="popUP" type="Node2D" parent="." unique_id=750454805]
+visibility_layer = 2
+
+[node name="target" parent="popUP" unique_id=3477415 instance=ExtResource("1_ss1cv")]
+
+[node name="Node2D" parent="." unique_id=530930820 instance=ExtResource("2_rotdt")]
+light_mask = 2
+visibility_layer = 2
+position = Vector2(432, 248)

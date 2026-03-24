@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://dh8ni6g3kg8wj"]
+
+[ext_resource type="Script" uid="uid://ddx3u1ebkkxha" path="res://UserInterface/main_menu.gd" id="1_qgde4"]
+
+[node name="Control" type="Control" unique_id=982928771]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qgde4")
+
+[node name="Button" type="Button" parent="." unique_id=954346162]
+layout_mode = 0
+offset_left = 416.0
+offset_top = 192.0
+offset_right = 736.0
+offset_bottom = 328.0
+text = "play"
+
+[node name="Button2" type="Button" parent="." unique_id=1666073309]
+layout_mode = 0
+offset_left = 416.0
+offset_top = 384.0
+offset_right = 736.0
+offset_bottom = 512.0
+text = "info"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

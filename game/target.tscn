@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://dtegkvmsycaqn"]
+
+[ext_resource type="Texture2D" uid="uid://cnad5vsvh6xuv" path="res://icon.svg" id="1_mqea0"]
+[ext_resource type="Script" uid="uid://c6i8stlamerwg" path="res://game/target.gd" id="2_231uo"]
+
+[node name="target" type="Sprite2D" unique_id=1659349752]
+light_mask = 2
+visibility_layer = 2
+position = Vector2(608, 344)
+texture = ExtResource("1_mqea0")
+script = ExtResource("2_231uo")
