@@ -3,11 +3,27 @@
 [ext_resource type="Script" uid="uid://bktbhod5xsv4n" path="res://game/background.gd" id="1_q7gnx"]
 [ext_resource type="PackedScene" uid="uid://dtegkvmsycaqn" path="res://game/target.tscn" id="1_ss1cv"]
 [ext_resource type="PackedScene" uid="uid://d3qtm72c4pxg" path="res://game/spawner.tscn" id="2_rotdt"]
+[ext_resource type="Texture2D" uid="uid://ju1gu4le0n5k" path="res://assets/wetransfer_happy-2-1-png_2026-03-25_2143/GameScreen.png" id="4_mupbp"]
+[ext_resource type="PackedScene" uid="uid://ddpeawfaksrtl" path="res://UserInterface/cursor.tscn" id="5_jlapn"]
+[ext_resource type="PackedScene" uid="uid://dce7t8fvaodx4" path="res://game/icescreamMan.tscn" id="6_k8nr6"]
+[ext_resource type="PackedScene" uid="uid://0fvchtuw8p7l" path="res://game/rage.tscn" id="7_hex6n"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jlapn"]
+texture = ExtResource("4_mupbp")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ut7ke"]
 size = Vector2(1152, 637)
 
 [node name="Node2D" type="Node2D" unique_id=1720646014]
+
+[node name="Panel" type="Panel" parent="." unique_id=45813943]
+offset_right = 1152.0
+offset_bottom = 648.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_jlapn")
+
+[node name="AnimatedSprite2D" parent="." unique_id=824956074 instance=ExtResource("6_k8nr6")]
+position = Vector2(591.99994, 343.99997)
+scale = Vector2(0.2, 0.2)
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1488605819]
 script = ExtResource("1_q7gnx")
@@ -15,8 +31,6 @@ script = ExtResource("1_q7gnx")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=470503592]
 position = Vector2(576, 321.5)
 shape = SubResource("RectangleShape2D_ut7ke")
-
-[node name="target" parent="." unique_id=1659349752 instance=ExtResource("1_ss1cv")]
 
 [node name="popUP" type="Node2D" parent="." unique_id=750454805]
 visibility_layer = 2
@@ -26,4 +40,15 @@ visibility_layer = 2
 [node name="Node2D" parent="." unique_id=530930820 instance=ExtResource("2_rotdt")]
 light_mask = 2
 visibility_layer = 2
-position = Vector2(432, 248)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1355107246]
+layer = 120
+
+[node name="Sprite2D" parent="CanvasLayer" unique_id=527202148 instance=ExtResource("5_jlapn")]
+
+[node name="Control" parent="." unique_id=1541205762 groups=["rage"] instance=ExtResource("7_hex6n")]
+offset_left = 14.999999
+offset_top = 77.00001
+offset_right = 23.0
+offset_bottom = 85.0
+scale = Vector2(0.8, 1.01)

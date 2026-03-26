@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://8mtslinbnu5e"]
+
+[ext_resource type="Script" uid="uid://p2xldvugh1hx" path="res://UserInterface/information.gd" id="1_uu8m7"]
+[ext_resource type="Texture2D" uid="uid://catws848d5mml" path="res://assets/wetransfer_happy-2-1-png_2026-03-25_2143/Info.png" id="2_1qjve"]
+[ext_resource type="FontFile" uid="uid://bxj1j3pq3n4hn" path="res://assets/pixeled/Pixeled.ttf" id="3_ywq2a"]
+[ext_resource type="Texture2D" uid="uid://cmiofj7yirgoj" path="res://assets/wetransfer_happy-2-1-png_2026-03-25_2143/Closebutton.png" id="4_f4bg2"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_a2d7x"]
+texture = ExtResource("2_1qjve")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jssl1"]
+texture = ExtResource("4_f4bg2")
+
+[node name="Control" type="Control" unique_id=2140943551]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_uu8m7")
+
+[node name="Panel" type="Panel" parent="." unique_id=1687847424]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_a2d7x")
+
+[node name="Button" type="Button" parent="." unique_id=954346101]
+layout_mode = 0
+offset_left = 520.0
+offset_top = 536.0
+offset_right = 632.0
+offset_bottom = 616.0
+theme_override_colors/font_color = Color(0.49411765, 0, 0.38431373, 1)
+theme_override_fonts/font = ExtResource("3_ywq2a")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxTexture_jssl1")
+text = "CLOSE"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

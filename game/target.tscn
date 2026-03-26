@@ -1,11 +1,69 @@
 [gd_scene format=3 uid="uid://dtegkvmsycaqn"]
 
-[ext_resource type="Texture2D" uid="uid://cnad5vsvh6xuv" path="res://icon.svg" id="1_mqea0"]
+[ext_resource type="Texture2D" uid="uid://cy3kwk4ps6i0m" path="res://assets/wetransfer_happy-2-1-png_2026-03-25_2143/Popup.png" id="1_mqea0"]
 [ext_resource type="Script" uid="uid://c6i8stlamerwg" path="res://game/target.gd" id="2_231uo"]
+[ext_resource type="Texture2D" uid="uid://dfo8wgcw572xq" path="res://assets/wetransfer_happy-2-1-png_2026-03-25_2143/Popup (2).png" id="3_qdwb4"]
+[ext_resource type="Texture2D" uid="uid://bhilmvtearjjc" path="res://assets/wetransfer_happy-2-1-png_2026-03-25_2143/Popup (3).png" id="4_8yf6e"]
+[ext_resource type="Texture2D" uid="uid://dlr8dpoh3cb26" path="res://assets/wetransfer_happy-2-1-png_2026-03-25_2143/Popup (4).png" id="5_3cbwh"]
+[ext_resource type="Texture2D" uid="uid://camk6mb71hcvk" path="res://assets/wetransfer_happy-2-1-png_2026-03-25_2143/Popup (5).png" id="6_3tsrx"]
+[ext_resource type="Texture2D" uid="uid://1tqvb3l5isxf" path="res://assets/wetransfer_happy-2-1-png_2026-03-25_2143/Popup (6).png" id="7_ax5sj"]
+[ext_resource type="Texture2D" uid="uid://b7xo8itv5bjyg" path="res://assets/wetransfer_happy-2-1-png_2026-03-25_2143/Popup (7).png" id="8_sy2nn"]
+[ext_resource type="Texture2D" uid="uid://c3a7vsgwjip2l" path="res://assets/wetransfer_happy-2-1-png_2026-03-25_2143/Popup (8).png" id="9_8ofv0"]
+[ext_resource type="Texture2D" uid="uid://di0xwgbvgmsjc" path="res://assets/wetransfer_happy-2-1-png_2026-03-25_2143/Popup (9).png" id="10_n5eyc"]
+[ext_resource type="Texture2D" uid="uid://pyi3e7kgbgxv" path="res://assets/wetransfer_happy-2-1-png_2026-03-25_2143/Popup (10).png" id="11_rmaky"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jipu6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_qdwb4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_8yf6e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_3cbwh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_3tsrx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_ax5sj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_3tsrx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_ax5sj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_sy2nn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_8ofv0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_n5eyc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_rmaky")
+}],
+"loop": false,
+"name": &"onclickPopup",
+"speed": 10.0
+}]
 
 [node name="target" type="Sprite2D" unique_id=1659349752]
 light_mask = 2
 visibility_layer = 2
-position = Vector2(608, 344)
+position = Vector2(704, 348)
+scale = Vector2(0.04, 0.036)
 texture = ExtResource("1_mqea0")
 script = ExtResource("2_231uo")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1989831987]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_jipu6")
+animation = &"onclickPopup"
+frame = 10
+frame_progress = 1.0

@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://jfc6ab4jm3d2" path="res://game/spawner.gd" id="1_lx0qd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lx0qd"]
-size = Vector2(1152, 640)
+size = Vector2(960, 448)
 
 [node name="Node2D" type="Node2D" unique_id=530930820]
 position = Vector2(432, 272)
@@ -15,7 +15,7 @@ autostart = true
 [node name="SpawnZone" type="Area2D" parent="." unique_id=724850603]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SpawnZone" unique_id=589733711]
-position = Vector2(144, 48)
+position = Vector2(176, 80)
 shape = SubResource("RectangleShape2D_lx0qd")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

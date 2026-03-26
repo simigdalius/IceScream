@@ -1,6 +1,19 @@
 [gd_scene format=3 uid="uid://dh8ni6g3kg8wj"]
 
 [ext_resource type="Script" uid="uid://ddx3u1ebkkxha" path="res://UserInterface/main_menu.gd" id="1_qgde4"]
+[ext_resource type="Texture2D" uid="uid://40myhbcq4vtm" path="res://assets/wetransfer_happy-2-1-png_2026-03-25_2143/Mainmenu.png" id="2_8ij2a"]
+[ext_resource type="FontFile" uid="uid://bxj1j3pq3n4hn" path="res://assets/pixeled/Pixeled.ttf" id="3_32pey"]
+[ext_resource type="Texture2D" uid="uid://jandaufrxh56" path="res://assets/wetransfer_happy-2-1-png_2026-03-25_2143/Button.png" id="3_iuvr8"]
+[ext_resource type="PackedScene" uid="uid://ddpeawfaksrtl" path="res://UserInterface/cursor.tscn" id="5_qklc5"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_iuvr8"]
+texture = ExtResource("2_8ij2a")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_32pey"]
+texture = ExtResource("3_iuvr8")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qklc5"]
+texture = ExtResource("3_iuvr8")
 
 [node name="Control" type="Control" unique_id=982928771]
 layout_mode = 3
@@ -11,21 +24,40 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_qgde4")
 
-[node name="Button" type="Button" parent="." unique_id=954346162]
+[node name="Panel" type="Panel" parent="." unique_id=1607281057]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_iuvr8")
+
+[node name="Button2" type="Button" parent="Panel" unique_id=1666073309]
 layout_mode = 0
 offset_left = 416.0
-offset_top = 192.0
+offset_top = 432.0
 offset_right = 736.0
-offset_bottom = 328.0
-text = "play"
+offset_bottom = 560.0
+theme_override_colors/font_color = Color(0.13725491, 0.13725491, 0.5411765, 1)
+theme_override_fonts/font = ExtResource("3_32pey")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxTexture_32pey")
+text = "INFO"
 
-[node name="Button2" type="Button" parent="." unique_id=1666073309]
+[node name="Button" type="Button" parent="Panel" unique_id=954346162]
 layout_mode = 0
 offset_left = 416.0
-offset_top = 384.0
+offset_top = 272.0
 offset_right = 736.0
-offset_bottom = 512.0
-text = "info"
+offset_bottom = 408.0
+theme_override_colors/font_color = Color(0.13725491, 0.13725491, 0.5411765, 1)
+theme_override_fonts/font = ExtResource("3_32pey")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxTexture_qklc5")
+text = "PLAY"
 
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=794756740]
+layer = 120
+
+[node name="Sprite2D" parent="CanvasLayer" unique_id=527202148 instance=ExtResource("5_qklc5")]
+
+[connection signal="pressed" from="Panel/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Panel/Button" to="." method="_on_button_pressed"]

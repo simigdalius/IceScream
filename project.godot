@@ -15,6 +15,14 @@ run/main_scene="uid://dh8ni6g3kg8wj"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[display]
+
+mouse_cursor/custom_image="uid://b7fk1rcwbk112"
+
+[global_group]
+
+rage=""
+
 [input]
 
 click={

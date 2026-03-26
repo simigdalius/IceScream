@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://dce7t8fvaodx4"]
+
+[ext_resource type="Texture2D" uid="uid://vf3tdkdmagr3" path="res://assets/wetransfer_happy-2-1-png_2026-03-25_2143/Ingame.png" id="1_iewq2"]
+[ext_resource type="Texture2D" uid="uid://chuxrd3kvxetc" path="res://assets/wetransfer_happy-2-1-png_2026-03-25_2143/Ingame2.png" id="2_10baj"]
+[ext_resource type="Script" uid="uid://cadpctl2efd5u" path="res://game/icescream_man.gd" id="3_ncs2d"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yv2sy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_iewq2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_10baj")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Node2D" type="Node2D" unique_id=934800913]
+script = ExtResource("3_ncs2d")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=824956074]
+sprite_frames = SubResource("SpriteFrames_yv2sy")
+frame_progress = 0.4715921

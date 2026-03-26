@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://0fvchtuw8p7l"]
+
+[ext_resource type="Script" uid="uid://cjalp6qpfig0n" path="res://game/rage.gd" id="1_mbs3j"]
+[ext_resource type="Texture2D" uid="uid://m66es4elly80" path="res://assets/wetransfer_happy-2-1-png_2026-03-25_2143/Framebar.png" id="1_pknnq"]
+[ext_resource type="Texture2D" uid="uid://7t0vul28vf4a" path="res://assets/wetransfer_happy-2-1-png_2026-03-25_2143/Effect.png" id="2_mbs3j"]
+[ext_resource type="Texture2D" uid="uid://dbhqhtvpwdno3" path="res://assets/wetransfer_happy-2-1-png_2026-03-25_2143/Rage.png" id="3_pyq35"]
+
+[node name="Control" type="Control" unique_id=1541205762 node_paths=PackedStringArray("back_bar", "front_bar")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 8.0
+offset_bottom = 8.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_mbs3j")
+back_bar = NodePath("TextureProgressBar")
+front_bar = NodePath("TextureProgressBar2")
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="." unique_id=1905390237]
+layout_mode = 0
+offset_right = 580.0
+offset_bottom = 2114.2856
+scale = Vector2(0.15, 0.15)
+value = 100.0
+fill_mode = 3
+texture_over = ExtResource("1_pknnq")
+texture_progress = ExtResource("2_mbs3j")
+
+[node name="TextureProgressBar2" type="TextureProgressBar" parent="." unique_id=192469721]
+layout_mode = 0
+offset_right = 580.0
+offset_bottom = 2114.2856
+scale = Vector2(0.15, 0.15)
+value = 100.0
+fill_mode = 3
+texture_progress = ExtResource("3_pyq35")
