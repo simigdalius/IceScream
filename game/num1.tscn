@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://c6db7y55v2p0g"]
+
+[ext_resource type="Texture2D" uid="uid://bxgrbcrfmrdek" path="res://assets/wetransfer_button-4-png_2026-03-27_0906/One.png" id="1_b7gn5"]
+[ext_resource type="Script" uid="uid://cx0qs4ymgenet" path="res://game/num_1.gd" id="2_hxfr7"]
+[ext_resource type="Texture2D" uid="uid://de3h84yxnt24o" path="res://assets/wetransfer_button-4-png_2026-03-27_0906/One (2).png" id="3_gi4lw"]
+[ext_resource type="Texture2D" uid="uid://b6r3cl4xao4uc" path="res://assets/wetransfer_button-4-png_2026-03-27_0906/One (3).png" id="4_o6oex"]
+[ext_resource type="Texture2D" uid="uid://dq4r8wdjlhiqa" path="res://assets/wetransfer_button-4-png_2026-03-27_0906/One (4).png" id="5_qf1ef"]
+[ext_resource type="Texture2D" uid="uid://chetcqf1t1a8f" path="res://assets/wetransfer_button-4-png_2026-03-27_0906/One (5).png" id="6_qgsjp"]
+[ext_resource type="Texture2D" uid="uid://c4hlgprjke72g" path="res://assets/wetransfer_button-4-png_2026-03-27_0906/One (6).png" id="7_eshbg"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7duvl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_gi4lw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_o6oex")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_qf1ef")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_qgsjp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_eshbg")
+}],
+"loop": false,
+"name": &"fade1",
+"speed": 10.0
+}]
+
+[node name="Sprite2D" type="Sprite2D" unique_id=431207482]
+position = Vector2(68.52, 56.02)
+scale = Vector2(0.035625, 0.03513672)
+texture = ExtResource("1_b7gn5")
+script = ExtResource("2_hxfr7")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1341504363]
+position = Vector2(0.5, 0.5)
+scale = Vector2(1.0004883, 1.0004883)
+sprite_frames = SubResource("SpriteFrames_7duvl")
+animation = &"fade1"
+frame = 4
+frame_progress = 1.0

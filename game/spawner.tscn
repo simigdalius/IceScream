@@ -10,6 +10,7 @@ position = Vector2(432, 272)
 script = ExtResource("1_lx0qd")
 
 [node name="Timer" type="Timer" parent="." unique_id=784943210]
+wait_time = 3.0
 autostart = true
 
 [node name="SpawnZone" type="Area2D" parent="." unique_id=724850603]

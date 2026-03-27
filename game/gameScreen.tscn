@@ -1,15 +1,19 @@
 [gd_scene format=3 uid="uid://cpjco5cvgq283"]
 
+[ext_resource type="Texture2D" uid="uid://bcaa7n4iwpqwb" path="res://assets/wetransfer_button-4-png_2026-03-27_0906/GameScreen.png" id="1_k8nr6"]
 [ext_resource type="Script" uid="uid://bktbhod5xsv4n" path="res://game/background.gd" id="1_q7gnx"]
 [ext_resource type="PackedScene" uid="uid://dtegkvmsycaqn" path="res://game/target.tscn" id="1_ss1cv"]
 [ext_resource type="PackedScene" uid="uid://d3qtm72c4pxg" path="res://game/spawner.tscn" id="2_rotdt"]
-[ext_resource type="Texture2D" uid="uid://ju1gu4le0n5k" path="res://assets/wetransfer_happy-2-1-png_2026-03-25_2143/GameScreen.png" id="4_mupbp"]
+[ext_resource type="PackedScene" uid="uid://c6db7y55v2p0g" path="res://game/num1.tscn" id="5_ff26b"]
 [ext_resource type="PackedScene" uid="uid://ddpeawfaksrtl" path="res://UserInterface/cursor.tscn" id="5_jlapn"]
+[ext_resource type="PackedScene" uid="uid://3tjbhqeo1ask" path="res://game/num2.tscn" id="6_37tqh"]
 [ext_resource type="PackedScene" uid="uid://dce7t8fvaodx4" path="res://game/icescreamMan.tscn" id="6_k8nr6"]
 [ext_resource type="PackedScene" uid="uid://0fvchtuw8p7l" path="res://game/rage.tscn" id="7_hex6n"]
+[ext_resource type="PackedScene" uid="uid://c0g3elj7dho1b" path="res://game/num3.tscn" id="7_kog82"]
+[ext_resource type="Texture2D" uid="uid://bhdf8ewe0vyue" path="res://assets/wetransfer_button-4-png_2026-03-27_0906/Drawing 17 (2).png" id="7_sgwse"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jlapn"]
-texture = ExtResource("4_mupbp")
+texture = ExtResource("1_k8nr6")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ut7ke"]
 size = Vector2(1152, 637)
@@ -36,19 +40,30 @@ shape = SubResource("RectangleShape2D_ut7ke")
 visibility_layer = 2
 
 [node name="target" parent="popUP" unique_id=3477415 instance=ExtResource("1_ss1cv")]
+position = Vector2(882.99994, 237)
+
+[node name="Sprite2D" parent="popUP" unique_id=431207482 instance=ExtResource("5_ff26b")]
+position = Vector2(288.99994, 228)
+
+[node name="Sprite2D2" parent="popUP" unique_id=916167932 instance=ExtResource("6_37tqh")]
+position = Vector2(492, 225.00002)
+
+[node name="Sprite2D3" parent="popUP" unique_id=1821175739 instance=ExtResource("7_kog82")]
+position = Vector2(683, 226)
 
 [node name="Node2D" parent="." unique_id=530930820 instance=ExtResource("2_rotdt")]
 light_mask = 2
 visibility_layer = 2
+position = Vector2(448, 247)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1355107246]
 layer = 120
 
-[node name="Sprite2D" parent="CanvasLayer" unique_id=527202148 instance=ExtResource("5_jlapn")]
+[node name="Sprite2D" parent="CanvasLayer" unique_id=527202148 groups=["rage"] instance=ExtResource("5_jlapn")]
+texture = ExtResource("7_sgwse")
 
-[node name="Control" parent="." unique_id=1541205762 groups=["rage"] instance=ExtResource("7_hex6n")]
-offset_left = 14.999999
-offset_top = 77.00001
-offset_right = 23.0
-offset_bottom = 85.0
-scale = Vector2(0.8, 1.01)
+[node name="Control" parent="." unique_id=1541205762 instance=ExtResource("7_hex6n")]
+offset_left = 2.0
+offset_top = 79.0
+offset_right = 10.0
+offset_bottom = 87.0

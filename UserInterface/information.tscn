@@ -3,13 +3,69 @@
 [ext_resource type="Script" uid="uid://p2xldvugh1hx" path="res://UserInterface/information.gd" id="1_uu8m7"]
 [ext_resource type="Texture2D" uid="uid://catws848d5mml" path="res://assets/wetransfer_happy-2-1-png_2026-03-25_2143/Info.png" id="2_1qjve"]
 [ext_resource type="FontFile" uid="uid://bxj1j3pq3n4hn" path="res://assets/pixeled/Pixeled.ttf" id="3_ywq2a"]
-[ext_resource type="Texture2D" uid="uid://cmiofj7yirgoj" path="res://assets/wetransfer_happy-2-1-png_2026-03-25_2143/Closebutton.png" id="4_f4bg2"]
+[ext_resource type="Texture2D" uid="uid://cato80hem3pmy" path="res://assets/wetransfer_button-4-png_2026-03-27_0906/Delete  (2).png" id="4_uu8m7"]
+[ext_resource type="Texture2D" uid="uid://dns6hk8l11rf6" path="res://assets/wetransfer_button-4-png_2026-03-27_0906/Delete .png" id="5_1qjve"]
+[ext_resource type="PackedScene" uid="uid://ddpeawfaksrtl" path="res://UserInterface/cursor.tscn" id="6_ywq2a"]
+[ext_resource type="Texture2D" uid="uid://bhdf8ewe0vyue" path="res://assets/wetransfer_button-4-png_2026-03-27_0906/Drawing 17 (2).png" id="7_f4bg2"]
+[ext_resource type="Texture2D" uid="uid://dw03yqdsp4mhl" path="res://assets/wetransfer_button-4-png_2026-03-27_0906/Button (4).png" id="8_mmb7h"]
+[ext_resource type="Texture2D" uid="uid://dmyvhj121t1ca" path="res://assets/wetransfer_button-4-png_2026-03-27_0906/Button (3).png" id="9_pcs48"]
+[ext_resource type="Texture2D" uid="uid://jandaufrxh56" path="res://assets/wetransfer_happy-2-1-png_2026-03-25_2143/Button.png" id="10_6ignf"]
+[ext_resource type="Texture2D" uid="uid://bxwnu5m5shwm5" path="res://assets/wetransfer_button-4-png_2026-03-27_0906/Button.png" id="10_i5x8x"]
+[ext_resource type="Texture2D" uid="uid://ctk040od1y0me" path="res://assets/wetransfer_button-4-png_2026-03-27_0906/Mouse.png" id="11_inqyr"]
+[ext_resource type="Texture2D" uid="uid://bxgrbcrfmrdek" path="res://assets/wetransfer_button-4-png_2026-03-27_0906/One.png" id="12_ksstl"]
+[ext_resource type="Texture2D" uid="uid://bj1mwvmhkx6h7" path="res://assets/wetransfer_button-4-png_2026-03-27_0906/Button (2).png" id="12_r211x"]
+[ext_resource type="Texture2D" uid="uid://xs22avlvpqcb" path="res://assets/wetransfer_button-4-png_2026-03-27_0906/Two.png" id="13_3l1ci"]
+[ext_resource type="FontFile" uid="uid://s3or5fmifr8i" path="res://assets/dogica/TTF/dogicabold.ttf" id="13_pcs48"]
+[ext_resource type="Texture2D" uid="uid://bnpkayaq0ltrx" path="res://assets/wetransfer_button-4-png_2026-03-27_0906/Three.png" id="15_x8ngd"]
+[ext_resource type="Texture2D" uid="uid://cy3kwk4ps6i0m" path="res://assets/wetransfer_happy-2-1-png_2026-03-25_2143/Popup.png" id="18_qdlsy"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_a2d7x"]
 texture = ExtResource("2_1qjve")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jssl1"]
-texture = ExtResource("4_f4bg2")
+texture = ExtResource("4_uu8m7")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_f4bg2"]
+texture = ExtResource("5_1qjve")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ywq2a"]
+texture = ExtResource("5_1qjve")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_x8ngd"]
+texture = ExtResource("12_r211x")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_i5x8x"]
+texture = ExtResource("12_r211x")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wjhrl"]
+texture = ExtResource("12_r211x")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_y5tgt"]
+texture = ExtResource("10_6ignf")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ksstl"]
+texture = ExtResource("10_i5x8x")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_m8f36"]
+texture = ExtResource("12_ksstl")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_t8t1f"]
+texture = ExtResource("13_3l1ci")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6ignf"]
+texture = ExtResource("9_pcs48")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_egov6"]
+texture = ExtResource("15_x8ngd")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7d783"]
+texture = ExtResource("8_mmb7h")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3l1ci"]
+texture = ExtResource("11_inqyr")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_r34eu"]
+texture = ExtResource("18_qdlsy")
 
 [node name="Control" type="Control" unique_id=2140943551]
 layout_mode = 3
@@ -26,16 +82,228 @@ offset_right = 1152.0
 offset_bottom = 648.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_a2d7x")
 
-[node name="Button" type="Button" parent="." unique_id=954346101]
+[node name="Button" type="Button" parent="." unique_id=954346101 groups=["rage"]]
 layout_mode = 0
-offset_left = 520.0
-offset_top = 536.0
-offset_right = 632.0
-offset_bottom = 616.0
+offset_left = 1032.0
+offset_top = 24.0
+offset_right = 1120.0
+offset_bottom = 104.0
 theme_override_colors/font_color = Color(0.49411765, 0, 0.38431373, 1)
 theme_override_fonts/font = ExtResource("3_ywq2a")
 theme_override_font_sizes/font_size = 16
 theme_override_styles/normal = SubResource("StyleBoxTexture_jssl1")
-text = "CLOSE"
+theme_override_styles/pressed = SubResource("StyleBoxTexture_f4bg2")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ywq2a")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=957753770]
+layer = 120
+
+[node name="Sprite2D" parent="CanvasLayer" unique_id=527202148 instance=ExtResource("6_ywq2a")]
+texture = ExtResource("7_f4bg2")
+
+[node name="Panel2" type="Panel" parent="." unique_id=1180859727]
+layout_mode = 0
+offset_left = 352.0
+offset_top = 8.0
+offset_right = 800.0
+offset_bottom = 100.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_x8ngd")
+
+[node name="Label" type="Label" parent="Panel2" unique_id=1013410862]
+layout_mode = 0
+offset_left = -176.0
+offset_top = 32.0
+offset_right = 628.0
+offset_bottom = 146.0
+theme_override_colors/font_color = Color(0.5223399, 0.8334457, 0.96226186, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0.43529412, 1)
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = ExtResource("13_pcs48")
+theme_override_font_sizes/font_size = 32
+text = "INFORMATION"
+horizontal_alignment = 1
+
+[node name="story" type="Panel" parent="." unique_id=927119974]
+layout_mode = 0
+offset_left = 96.0
+offset_top = 104.0
+offset_right = 1080.0
+offset_bottom = 336.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_i5x8x")
+
+[node name="Label" type="Label" parent="story" unique_id=1394532830]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 56.0
+offset_right = 992.0
+offset_bottom = 200.0
+theme_override_colors/font_color = Color(0.52156866, 0.8352941, 0.9607843, 1)
+theme_override_constants/line_spacing = 10
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("13_pcs48")
+text = "EMBARK ON A CHAOTIC JOURNEY TO TURKEY FOR THE 
+ULTIMATE PRIZE:A WORLD-FAMOUS DONDURMA ICE CREAM!
+BUT GETTING YOUR HANDS ON IT ISN'T AS EASY AS
+YOU THINK. THE STREET VENDOR IS A MASTER 
+OF RAGE BAIT, AND YOUR PATIENCE IS WEARING THIN.
+ TRY NOT TO RAGE QUIT!"
+horizontal_alignment = 1
+
+[node name="how to play" type="Panel" parent="." unique_id=788147419]
+layout_mode = 0
+offset_left = 96.0
+offset_top = 328.0
+offset_right = 1080.0
+offset_bottom = 592.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_wjhrl")
+
+[node name="Panel" type="Panel" parent="how to play" unique_id=1167988766]
+layout_mode = 0
+offset_left = 304.0
+offset_right = 656.0
+offset_bottom = 56.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_y5tgt")
+
+[node name="Label" type="Label" parent="how to play/Panel" unique_id=1217203300]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 8.0
+offset_right = 328.0
+offset_bottom = 48.0
+theme_override_colors/font_color = Color(0.52156866, 0.8352941, 0.9607843, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0.43529412, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("13_pcs48")
+theme_override_font_sizes/font_size = 25
+text = "HOW TO PLAY"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="how to play" unique_id=128380342]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 64.0
+offset_right = 920.0
+offset_bottom = 109.0
+theme_override_colors/font_color = Color(0.52156866, 0.8352941, 0.9607843, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("13_pcs48")
+theme_override_font_sizes/font_size = 14
+text = "EVERY MISS-CLICK, 
+TYPO, OR LOST ICON FILLS YOUR RAGE BAR.
+IF IT REACHES THE LIMIT, YOU LOSE!"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="how to play" unique_id=1520987189]
+layout_mode = 0
+offset_left = 104.0
+offset_top = 192.0
+offset_right = 440.0
+offset_bottom = 204.0
+theme_override_colors/font_color = Color(0.52156866, 0.8352941, 0.9607843, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("13_pcs48")
+theme_override_font_sizes/font_size = 13
+text = "FOR    YOU AIM AND PRESS"
+
+[node name="press3" type="Panel" parent="how to play/Label2" unique_id=1158419949]
+layout_mode = 0
+offset_left = 320.0
+offset_top = -8.0
+offset_right = 352.0
+offset_bottom = 24.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_ksstl")
+
+[node name="Panel2" type="Panel" parent="how to play/Label2" unique_id=562312289]
+layout_mode = 0
+offset_left = 48.0
+offset_top = -8.0
+offset_right = 88.0
+offset_bottom = 24.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_m8f36")
+
+[node name="Label3" type="Label" parent="how to play" unique_id=480179534]
+layout_mode = 0
+offset_left = 528.0
+offset_top = 152.0
+offset_right = 864.0
+offset_bottom = 164.0
+theme_override_colors/font_color = Color(0.52156866, 0.8352941, 0.9607843, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("13_pcs48")
+theme_override_font_sizes/font_size = 13
+text = "FOR    YOU AIM AND PRESS"
+
+[node name="Panel3" type="Panel" parent="how to play/Label3" unique_id=1586772610]
+layout_mode = 0
+offset_left = 44.0
+offset_top = -8.0
+offset_right = 84.0
+offset_bottom = 24.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_t8t1f")
+
+[node name="press2" type="Panel" parent="how to play/Label3" unique_id=222393360]
+layout_mode = 0
+offset_left = 320.0
+offset_top = -8.0
+offset_right = 352.0
+offset_bottom = 24.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_6ignf")
+
+[node name="Label4" type="Label" parent="how to play" unique_id=876011173]
+layout_mode = 0
+offset_left = 528.0
+offset_top = 192.0
+offset_right = 864.0
+offset_bottom = 204.0
+theme_override_colors/font_color = Color(0.52156866, 0.8352941, 0.9607843, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("13_pcs48")
+theme_override_font_sizes/font_size = 13
+text = "FOR    YOU AIM AND PRESS"
+
+[node name="Panel4" type="Panel" parent="how to play/Label4" unique_id=1361468817]
+layout_mode = 0
+offset_left = 44.0
+offset_top = -8.0
+offset_right = 84.0
+offset_bottom = 24.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_egov6")
+
+[node name="press1" type="Panel" parent="how to play/Label4" unique_id=2113639393]
+layout_mode = 0
+offset_left = 320.0
+offset_top = -8.0
+offset_right = 352.0
+offset_bottom = 24.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_7d783")
+
+[node name="Label5" type="Label" parent="how to play" unique_id=1236223174]
+layout_mode = 0
+offset_left = 104.0
+offset_top = 152.0
+offset_right = 440.0
+offset_bottom = 164.0
+theme_override_colors/font_color = Color(0.52156866, 0.8352941, 0.9607843, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("13_pcs48")
+theme_override_font_sizes/font_size = 13
+text = "FOR    YOU AIM AND PRESS"
+
+[node name="mouse" type="Panel" parent="how to play/Label5" unique_id=2110623928]
+layout_mode = 0
+offset_left = 320.0
+offset_top = -8.0
+offset_right = 352.0
+offset_bottom = 24.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_3l1ci")
+
+[node name="Panel5" type="Panel" parent="how to play/Label5" unique_id=731907107]
+layout_mode = 0
+offset_left = 48.0
+offset_top = -8.0
+offset_right = 88.0
+offset_bottom = 24.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_r34eu")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

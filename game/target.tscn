@@ -15,7 +15,7 @@
 [sub_resource type="SpriteFrames" id="SpriteFrames_jipu6"]
 animations = [{
 "frames": [{
-"duration": 1.0,
+"duration": 5.0,
 "texture": ExtResource("3_qdwb4")
 }, {
 "duration": 1.0,
@@ -50,7 +50,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"onclickPopup",
-"speed": 10.0
+"speed": 50.0
 }]
 
 [node name="target" type="Sprite2D" unique_id=1659349752]
