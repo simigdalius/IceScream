@@ -1,0 +1,234 @@
+[gd_scene format=3 uid="uid://b1t6sdll0bsbu"]
+
+[ext_resource type="Script" uid="uid://ppn3ry7aodu1" path="res://UserInterface/credits.gd" id="1_eu2ed"]
+[ext_resource type="Texture2D" uid="uid://catws848d5mml" path="res://assets/wetransfer_happy-2-1-png_2026-03-25_2143/Info.png" id="1_tsvwp"]
+[ext_resource type="PackedScene" uid="uid://ddpeawfaksrtl" path="res://UserInterface/cursor.tscn" id="2_6b528"]
+[ext_resource type="Texture2D" uid="uid://bhdf8ewe0vyue" path="res://assets/wetransfer_button-4-png_2026-03-27_0906/Drawing 17 (2).png" id="3_257qw"]
+[ext_resource type="Texture2D" uid="uid://bj1mwvmhkx6h7" path="res://assets/wetransfer_button-4-png_2026-03-27_0906/Button (2).png" id="4_n4v26"]
+[ext_resource type="FontFile" uid="uid://s3or5fmifr8i" path="res://assets/dogica/TTF/dogicabold.ttf" id="5_eu2ed"]
+[ext_resource type="Texture2D" uid="uid://jandaufrxh56" path="res://assets/wetransfer_happy-2-1-png_2026-03-25_2143/Button.png" id="6_djk8w"]
+[ext_resource type="Texture2D" uid="uid://cato80hem3pmy" path="res://assets/wetransfer_button-4-png_2026-03-27_0906/Delete  (2).png" id="9_vdshe"]
+[ext_resource type="Texture2D" uid="uid://dns6hk8l11rf6" path="res://assets/wetransfer_button-4-png_2026-03-27_0906/Delete .png" id="10_ma6rj"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vdshe"]
+texture = ExtResource("1_tsvwp")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ma6rj"]
+texture = ExtResource("4_n4v26")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yypa2"]
+texture = ExtResource("4_n4v26")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jdf5f"]
+texture = ExtResource("4_n4v26")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mtce4"]
+texture = ExtResource("6_djk8w")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ms27i"]
+texture = ExtResource("9_vdshe")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hb7ru"]
+texture = ExtResource("10_ma6rj")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gx2dh"]
+texture = ExtResource("10_ma6rj")
+
+[node name="Control" type="Control" unique_id=1481776524]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_eu2ed")
+
+[node name="Panel" type="Panel" parent="." unique_id=1426323569]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_vdshe")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1850528127]
+layer = 120
+
+[node name="Sprite2D" parent="CanvasLayer" unique_id=527202148 instance=ExtResource("2_6b528")]
+texture = ExtResource("3_257qw")
+
+[node name="Panel2" type="Panel" parent="." unique_id=790418620]
+layout_mode = 0
+offset_left = 352.0
+offset_top = 8.0
+offset_right = 800.0
+offset_bottom = 100.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_ma6rj")
+
+[node name="Label" type="Label" parent="Panel2" unique_id=1514682288]
+layout_mode = 0
+offset_left = -176.0
+offset_top = 32.0
+offset_right = 628.0
+offset_bottom = 146.0
+theme_override_colors/font_color = Color(0.5223399, 0.8334457, 0.96226186, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0.43529412, 1)
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = ExtResource("5_eu2ed")
+theme_override_font_sizes/font_size = 32
+text = "CREDITS
+"
+horizontal_alignment = 1
+
+[node name="story" type="Panel" parent="." unique_id=1988274471]
+layout_mode = 0
+offset_left = 96.0
+offset_top = 88.0
+offset_right = 1080.0
+offset_bottom = 320.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_yypa2")
+
+[node name="Label" type="Label" parent="story" unique_id=138745664]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 56.0
+offset_right = 920.0
+offset_bottom = 200.0
+theme_override_colors/font_color = Color(0.52156866, 0.8352941, 0.9607843, 1)
+theme_override_constants/line_spacing = 10
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("5_eu2ed")
+text = "A GAME MADE BY SIMIGALIUS
+Game Design / Programming, Art / Sprites, 
+Music / Sound Effects
+Writing 
+
+Fonts: DOGICA Roberto Mocci"
+horizontal_alignment = 1
+
+[node name="TOOLS" type="Panel" parent="." unique_id=1807304281]
+layout_mode = 0
+offset_left = 96.0
+offset_top = 312.0
+offset_right = 1080.0
+offset_bottom = 448.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_jdf5f")
+
+[node name="Panel" type="Panel" parent="TOOLS" unique_id=1769550230]
+layout_mode = 0
+offset_left = 304.0
+offset_right = 656.0
+offset_bottom = 56.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_mtce4")
+
+[node name="Label" type="Label" parent="TOOLS/Panel" unique_id=403665532]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 8.0
+offset_right = 328.0
+offset_bottom = 48.0
+theme_override_colors/font_color = Color(0.52156866, 0.8352941, 0.9607843, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0.43529412, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("5_eu2ed")
+theme_override_font_sizes/font_size = 25
+text = "TOOLS USED"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="TOOLS" unique_id=1538804976]
+layout_mode = 0
+offset_left = 104.0
+offset_top = 64.0
+offset_right = 464.0
+offset_bottom = 109.0
+theme_override_colors/font_color = Color(0.52156866, 0.8352941, 0.9607843, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("5_eu2ed")
+theme_override_font_sizes/font_size = 14
+text = "GAME ENGINE: GODOT
+ASSETS: PIXEL BRUSH"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="TOOLS" unique_id=1151723454]
+layout_mode = 0
+offset_left = 464.0
+offset_top = 64.0
+offset_right = 824.0
+offset_bottom = 109.0
+theme_override_colors/font_color = Color(0.52156866, 0.8352941, 0.9607843, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("5_eu2ed")
+theme_override_font_sizes/font_size = 14
+text = "AUDIO: BEEPBOX
+FONTS: DAFONT"
+horizontal_alignment = 1
+
+[node name="TOOLS2" type="Panel" parent="." unique_id=1928766472]
+layout_mode = 0
+offset_left = 96.0
+offset_top = 448.0
+offset_right = 1080.0
+offset_bottom = 584.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_jdf5f")
+
+[node name="Label" type="Label" parent="TOOLS2" unique_id=745114974]
+layout_mode = 0
+offset_left = 96.0
+offset_top = 64.0
+offset_right = 904.0
+offset_bottom = 88.0
+theme_override_colors/font_color = Color(0.52156866, 0.8352941, 0.9607843, 1)
+theme_override_constants/line_spacing = 10
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("5_eu2ed")
+text = "DISCORD:simigdali          GITHUB: simigdalius"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="TOOLS2" unique_id=603709286]
+layout_mode = 0
+offset_left = 104.0
+offset_top = 88.0
+offset_right = 896.0
+offset_bottom = 109.0
+theme_override_colors/font_color = Color(0.52156866, 0.8352941, 0.9607843, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("5_eu2ed")
+theme_override_font_sizes/font_size = 14
+text = "SPECIAL THANKS TO NICKY AND KDESP"
+horizontal_alignment = 1
+
+[node name="Panel" type="Panel" parent="TOOLS2" unique_id=83164994]
+layout_mode = 0
+offset_left = 304.0
+offset_right = 656.0
+offset_bottom = 56.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_mtce4")
+
+[node name="Label" type="Label" parent="TOOLS2/Panel" unique_id=1544003306]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 8.0
+offset_right = 328.0
+offset_bottom = 48.0
+theme_override_colors/font_color = Color(0.52156866, 0.8352941, 0.9607843, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0.43529412, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("5_eu2ed")
+theme_override_font_sizes/font_size = 25
+text = "FIND ME"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="." unique_id=1081847110 groups=["rage"]]
+layout_mode = 0
+offset_left = 1032.0
+offset_top = 16.0
+offset_right = 1120.0
+offset_bottom = 96.0
+theme_override_colors/font_color = Color(0.49411765, 0, 0.38431373, 1)
+theme_override_fonts/font = ExtResource("5_eu2ed")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxTexture_ms27i")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_hb7ru")
+theme_override_styles/hover = SubResource("StyleBoxTexture_gx2dh")
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

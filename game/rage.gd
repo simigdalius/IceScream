@@ -20,7 +20,6 @@ func _ready() -> void:
 	back_bar.max_value = 100
 
 func _input(event):
-	# Πατώντας Space, προσομοιώνουμε ένα missclick (+10 Rage)
 	if event is InputEventKey:
 		if event.is_pressed() and event.keycode == KEY_SPACE:
 			add_rage(10.0)
@@ -30,8 +29,8 @@ func update_bar(current: float, max_value: float):
 	front_bar.max_value = max_value
 	back_bar.max_value = max_value
 	
-	var is_rage_increase = pct > current_pct # Το Rage ΑΝΕΒΑΙΝΕΙ (Missclick ή Timeout)
-	var is_calm_down = pct < current_pct     # Το Rage ΠΕΦΤΕΙ (π.χ. σωστό κλικ)
+	var is_rage_increase = pct > current_pct 
+
 	
 	if is_rage_increase:
 		if front_tween and front_tween.is_running(): front_tween.kill()
@@ -42,21 +41,13 @@ func update_bar(current: float, max_value: float):
 		front_tween.tween_property(front_bar, "value", current, 0.25)
 		front_tween.tween_property(back_bar, "value", current, 0.25)
 		
-		_on_rage() # Καλεί το shake και το κόκκινο χρώμα!
-		
-	elif is_calm_down:
-		if front_tween and front_tween.is_running(): front_tween.kill()
-		if back_tween and back_tween.is_running(): back_tween.kill()
-		
-		# Όταν ηρεμεί, η μπροστά μπάρα πέφτει αμέσως και η πίσω ακολουθεί (trail effect)
-		front_bar.value = current
-		back_tween = create_tween()
-		back_tween.tween_property(back_bar, "value", current, 0.45)
-		
-		_on_heal() # Καλεί το πράσινο χρώμα
-		
+		_on_rage() 
+
 	current_pct = pct
 	_check_pulse(pct)
+	
+	if current>= max_value:
+		gameover()
 
 func _shake():
 	var original_pos = position
@@ -79,7 +70,6 @@ func _on_heal():
 	_flash(Color(0.3, 1, 0.3)) # Πράσινο
 
 func _check_pulse(pct: float) -> void:
-	# Άλλαξα τη λογική: Το pulse ξεκινάει όταν το Rage είναι ΚΡΙΣΙΜΑ ΨΗΛΑ (πάνω από 75%)
 	if pct >= 0.75 and low_rage_pulse:
 		if pulse_tween == null or not pulse_tween.is_running():
 			if pulse_tween:
@@ -99,7 +89,5 @@ func add_rage(amount: float):
 	var new_value = back_bar.value + amount
 	update_bar(new_value, back_bar.max_value)
 
-# Πρόσθεσα και αυτή τη συνάρτηση σε περίπτωση που θες να αφαιρείς rage με σωστά clicks!
-func remove_rage(amount: float):
-	var new_value = back_bar.value - amount
-	update_bar(new_value, back_bar.max_value)
+func gameover():
+	get_tree().change_scene_to_file("res://UserInterface/gameover.tscn")

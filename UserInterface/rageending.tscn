@@ -1,0 +1,98 @@
+[gd_scene format=3 uid="uid://dgohtp7mm3qf3"]
+
+[ext_resource type="Texture2D" uid="uid://bkhyqonogmueb" path="res://assets/wetransfer_happy-2-1-png_2026-03-25_2143/EndGame.png" id="1_4d5ug"]
+[ext_resource type="Script" uid="uid://dj7knkexkpg8h" path="res://UserInterface/rageending.gd" id="1_28sji"]
+[ext_resource type="Texture2D" uid="uid://bxqab63sixvmd" path="res://assets/wetransfer_happy-2-1-png_2026-03-25_2143/Happy (2) (1).png" id="2_64786"]
+[ext_resource type="PackedScene" uid="uid://ddpeawfaksrtl" path="res://UserInterface/cursor.tscn" id="3_wilke"]
+[ext_resource type="Texture2D" uid="uid://bhdf8ewe0vyue" path="res://assets/wetransfer_button-4-png_2026-03-27_0906/Drawing 17 (2).png" id="4_p8iy2"]
+[ext_resource type="FontFile" uid="uid://s3or5fmifr8i" path="res://assets/dogica/TTF/dogicabold.ttf" id="6_dgja8"]
+[ext_resource type="Texture2D" uid="uid://jandaufrxh56" path="res://assets/wetransfer_happy-2-1-png_2026-03-25_2143/Button.png" id="7_c0wyp"]
+[ext_resource type="Texture2D" uid="uid://bj1mwvmhkx6h7" path="res://assets/wetransfer_button-4-png_2026-03-27_0906/Button (2).png" id="8_36ypp"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_u65fj"]
+texture = ExtResource("1_4d5ug")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gj5qq"]
+texture = ExtResource("7_c0wyp")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vg6rg"]
+texture = ExtResource("8_36ypp")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ho6iq"]
+texture = ExtResource("8_36ypp")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8nd7l"]
+texture = ExtResource("7_c0wyp")
+
+[node name="Node2D" type="Node2D" unique_id=306965731]
+script = ExtResource("1_28sji")
+
+[node name="Panel" type="Panel" parent="." unique_id=1667089369]
+offset_right = 1152.0
+offset_bottom = 648.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_u65fj")
+
+[node name="winnntomata" type="Sprite2D" parent="." unique_id=971407600]
+position = Vector2(512, 360)
+scale = Vector2(0.18, 0.18)
+texture = ExtResource("2_64786")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=781658497]
+layer = 120
+
+[node name="Sprite2D" parent="CanvasLayer" unique_id=527202148 instance=ExtResource("3_wilke")]
+texture = ExtResource("4_p8iy2")
+
+[node name="quit" type="Button" parent="." unique_id=2094491273]
+offset_left = 736.0
+offset_top = 320.0
+offset_right = 992.0
+offset_bottom = 384.0
+theme_override_colors/font_color = Color(0.13725491, 0.13725491, 0.5411765, 1)
+theme_override_colors/font_hover_color = Color(0.52156866, 0.8352941, 0.9607843, 1)
+theme_override_fonts/font = ExtResource("6_dgja8")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxTexture_gj5qq")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_vg6rg")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ho6iq")
+text = "QUIT"
+
+[node name="Panel2" type="Panel" parent="." unique_id=1754800109]
+offset_left = 664.0
+offset_top = 200.0
+offset_right = 1064.0
+offset_bottom = 312.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_8nd7l")
+
+[node name="Label" type="Label" parent="Panel2" unique_id=997267408]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 24.0
+offset_right = 385.0
+offset_bottom = 71.0
+theme_override_colors/font_color = Color(0.52156866, 0.8352941, 0.9607843, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0.43529412, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("6_dgja8")
+theme_override_font_sizes/font_size = 19
+text = "THANKS FOR PLAYING!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="Panel2" unique_id=1562170631]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 53.0
+offset_right = 389.0
+offset_bottom = 100.0
+theme_override_colors/font_color = Color(0.52156866, 0.8352941, 0.9607843, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0.43529412, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("6_dgja8")
+theme_override_font_sizes/font_size = 12
+text = "YOU AIN'T THAT LITLE
+AFTER ALL"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]

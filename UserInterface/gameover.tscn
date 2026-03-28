@@ -1,0 +1,116 @@
+[gd_scene format=3 uid="uid://cmirogrxf64kb"]
+
+[ext_resource type="Texture2D" uid="uid://ju1gu4le0n5k" path="res://assets/wetransfer_happy-2-1-png_2026-03-25_2143/GameScreen.png" id="1_0nm50"]
+[ext_resource type="Script" uid="uid://o8mrnmkwhv3t" path="res://UserInterface/gameover.gd" id="1_r2rbn"]
+[ext_resource type="Texture2D" uid="uid://cyyh584ukq7ol" path="res://assets/Message.png" id="2_qd2q8"]
+[ext_resource type="FontFile" uid="uid://s3or5fmifr8i" path="res://assets/dogica/TTF/dogicabold.ttf" id="3_qd2q8"]
+[ext_resource type="Texture2D" uid="uid://clhtpkn6inpqo" path="res://assets/wetransfer_happy-2-1-png_2026-03-25_2143/Happy.png" id="4_0nm50"]
+[ext_resource type="Texture2D" uid="uid://jandaufrxh56" path="res://assets/wetransfer_happy-2-1-png_2026-03-25_2143/Button.png" id="5_p64yp"]
+[ext_resource type="Texture2D" uid="uid://bj1mwvmhkx6h7" path="res://assets/wetransfer_button-4-png_2026-03-27_0906/Button (2).png" id="6_vfbe2"]
+[ext_resource type="PackedScene" uid="uid://ddpeawfaksrtl" path="res://UserInterface/cursor.tscn" id="7_us4iy"]
+[ext_resource type="Texture2D" uid="uid://bhdf8ewe0vyue" path="res://assets/wetransfer_button-4-png_2026-03-27_0906/Drawing 17 (2).png" id="8_r2rbn"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1pd2h"]
+texture = ExtResource("1_0nm50")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0nm50"]
+texture = ExtResource("2_qd2q8")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5dgb1"]
+texture = ExtResource("4_0nm50")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_us4iy"]
+texture = ExtResource("5_p64yp")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_r2rbn"]
+texture = ExtResource("6_vfbe2")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_birc3"]
+texture = ExtResource("6_vfbe2")
+
+[node name="Control" type="Control" unique_id=454535517]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_r2rbn")
+
+[node name="Panel" type="Panel" parent="." unique_id=332169077]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_1pd2h")
+
+[node name="Panel2" type="Panel" parent="." unique_id=2047057833]
+layout_mode = 0
+offset_left = 216.0
+offset_top = 32.0
+offset_right = 663.0
+offset_bottom = 228.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_0nm50")
+
+[node name="Label" type="Label" parent="Panel2" unique_id=1154260065]
+layout_mode = 0
+offset_left = -29.0
+offset_top = 36.0
+offset_right = 475.0
+offset_bottom = 118.0
+theme_override_colors/font_color = Color(0.52156866, 0.8352941, 0.9607843, 1)
+theme_override_constants/line_spacing = 10
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("3_qd2q8")
+theme_override_font_sizes/font_size = 14
+text = "HA! YOU LOST!
+ IT'S OKAY LIL GUY 
+YOU CAN TRY NEXT TIME. 
+TRY NOT TO CRY"
+horizontal_alignment = 1
+
+[node name="Panel3" type="Panel" parent="." unique_id=1249860130]
+layout_mode = 0
+offset_left = 560.0
+offset_top = 152.0
+offset_right = 854.0
+offset_bottom = 543.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_5dgb1")
+
+[node name="quit" type="Button" parent="." unique_id=312668209]
+layout_mode = 0
+offset_left = 272.0
+offset_top = 384.0
+offset_right = 528.0
+offset_bottom = 448.0
+theme_override_colors/font_color = Color(0.13725491, 0.13725491, 0.5411765, 1)
+theme_override_colors/font_hover_color = Color(0.52156866, 0.8352941, 0.9607843, 1)
+theme_override_fonts/font = ExtResource("3_qd2q8")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxTexture_us4iy")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_r2rbn")
+theme_override_styles/hover = SubResource("StyleBoxTexture_birc3")
+text = "QUIT"
+
+[node name="RAGEQUIT" type="Button" parent="." unique_id=626757424]
+layout_mode = 0
+offset_left = 272.0
+offset_top = 296.0
+offset_right = 528.0
+offset_bottom = 360.0
+theme_override_colors/font_color = Color(0.13725491, 0.13725491, 0.5411765, 1)
+theme_override_colors/font_hover_color = Color(0.52156866, 0.8352941, 0.9607843, 1)
+theme_override_fonts/font = ExtResource("3_qd2q8")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxTexture_us4iy")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_r2rbn")
+theme_override_styles/hover = SubResource("StyleBoxTexture_birc3")
+text = "RAGE QUIT"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2140693632]
+layer = 120
+
+[node name="Sprite2D" parent="CanvasLayer" unique_id=527202148 groups=["rage"] instance=ExtResource("7_us4iy")]
+texture = ExtResource("8_r2rbn")
+
+[connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="RAGEQUIT" to="." method="_on_ragequit_pressed"]

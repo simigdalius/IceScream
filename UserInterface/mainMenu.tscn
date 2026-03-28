@@ -46,10 +46,10 @@ theme_override_styles/panel = SubResource("StyleBoxTexture_iuvr8")
 
 [node name="Button2" type="Button" parent="Panel" unique_id=1666073309]
 layout_mode = 0
-offset_left = 416.0
-offset_top = 432.0
-offset_right = 736.0
-offset_bottom = 560.0
+offset_left = 408.0
+offset_top = 376.0
+offset_right = 744.0
+offset_bottom = 464.0
 theme_override_colors/font_color = Color(0.13725491, 0.13725491, 0.5411765, 1)
 theme_override_colors/font_hover_color = Color(0.52156866, 0.8352941, 0.9607843, 1)
 theme_override_fonts/font = ExtResource("3_rv48e")
@@ -61,10 +61,10 @@ text = "INFO"
 
 [node name="Button" type="Button" parent="Panel" unique_id=954346162]
 layout_mode = 0
-offset_left = 416.0
+offset_left = 408.0
 offset_top = 272.0
-offset_right = 736.0
-offset_bottom = 408.0
+offset_right = 744.0
+offset_bottom = 360.0
 theme_override_colors/font_color = Color(0.13725491, 0.13725491, 0.5411765, 1)
 theme_override_colors/font_hover_color = Color(0.52156866, 0.8352941, 0.9607843, 1)
 theme_override_fonts/font = ExtResource("3_rv48e")
@@ -74,6 +74,21 @@ theme_override_styles/pressed = SubResource("StyleBoxTexture_24xbl")
 theme_override_styles/hover = SubResource("StyleBoxTexture_p4o1h")
 text = "PLAY"
 
+[node name="Button3" type="Button" parent="Panel" unique_id=1795207148]
+layout_mode = 0
+offset_left = 408.0
+offset_top = 480.0
+offset_right = 744.0
+offset_bottom = 568.0
+theme_override_colors/font_color = Color(0.13725491, 0.13725491, 0.5411765, 1)
+theme_override_colors/font_hover_color = Color(0.52156866, 0.8352941, 0.9607843, 1)
+theme_override_fonts/font = ExtResource("3_rv48e")
+theme_override_font_sizes/font_size = 42
+theme_override_styles/normal = SubResource("StyleBoxTexture_32pey")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_24fl3")
+theme_override_styles/hover = SubResource("StyleBoxTexture_rv48e")
+text = "CREDITS"
+
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=794756740]
 layer = 120
 
@@ -82,3 +97,4 @@ texture = ExtResource("7_rv48e")
 
 [connection signal="pressed" from="Panel/Button2" to="." method="_on_button_2_pressed"]
 [connection signal="pressed" from="Panel/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Panel/Button3" to="." method="_on_button_3_pressed"]

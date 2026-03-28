@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://p2xldvugh1hx" path="res://UserInterface/information.gd" id="1_uu8m7"]
 [ext_resource type="Texture2D" uid="uid://catws848d5mml" path="res://assets/wetransfer_happy-2-1-png_2026-03-25_2143/Info.png" id="2_1qjve"]
-[ext_resource type="FontFile" uid="uid://bxj1j3pq3n4hn" path="res://assets/pixeled/Pixeled.ttf" id="3_ywq2a"]
 [ext_resource type="Texture2D" uid="uid://cato80hem3pmy" path="res://assets/wetransfer_button-4-png_2026-03-27_0906/Delete  (2).png" id="4_uu8m7"]
 [ext_resource type="Texture2D" uid="uid://dns6hk8l11rf6" path="res://assets/wetransfer_button-4-png_2026-03-27_0906/Delete .png" id="5_1qjve"]
 [ext_resource type="PackedScene" uid="uid://ddpeawfaksrtl" path="res://UserInterface/cursor.tscn" id="6_ywq2a"]
@@ -89,7 +88,7 @@ offset_top = 24.0
 offset_right = 1120.0
 offset_bottom = 104.0
 theme_override_colors/font_color = Color(0.49411765, 0, 0.38431373, 1)
-theme_override_fonts/font = ExtResource("3_ywq2a")
+theme_override_fonts/font = ExtResource("13_pcs48")
 theme_override_font_sizes/font_size = 16
 theme_override_styles/normal = SubResource("StyleBoxTexture_jssl1")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_f4bg2")

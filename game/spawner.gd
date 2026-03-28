@@ -28,11 +28,10 @@ func _on_timer_timeout() -> void:
 	for item in spawn_list:
 		popup_node.add_child(item)
 		await get_tree().create_timer(randf_range(0.2, 0.4)).timeout
-	
-	await get_tree().create_timer(3).timeout 
-	
+	await get_tree().create_timer(randf_range(3, 3.5)).timeout
 	var objects_to_check = [ene, nu, nu2, nu3]
 	for obj in objects_to_check:
 		if is_instance_valid(obj):
-			get_tree().call_group("rage", "add_rage", 10.0)
-			obj.queue_free()
+			if is_inside_tree() and get_tree().get_node_count_in_group("rage") > 0:
+				get_tree().call_group("rage", "add_rage", 20.0)
+				obj.queue_free()
