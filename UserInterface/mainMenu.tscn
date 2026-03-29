@@ -6,7 +6,6 @@
 [ext_resource type="FontFile" uid="uid://s3or5fmifr8i" path="res://assets/dogica/TTF/dogicabold.ttf" id="3_rv48e"]
 [ext_resource type="Texture2D" uid="uid://bj1mwvmhkx6h7" path="res://assets/wetransfer_button-4-png_2026-03-27_0906/Button (2).png" id="5_emwwt"]
 [ext_resource type="PackedScene" uid="uid://ddpeawfaksrtl" path="res://UserInterface/cursor.tscn" id="5_qklc5"]
-[ext_resource type="Texture2D" uid="uid://bhdf8ewe0vyue" path="res://assets/wetransfer_button-4-png_2026-03-27_0906/Drawing 17 (2).png" id="7_rv48e"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_iuvr8"]
 texture = ExtResource("2_8ij2a")
@@ -93,7 +92,6 @@ text = "CREDITS"
 layer = 120
 
 [node name="Sprite2D" parent="CanvasLayer" unique_id=527202148 instance=ExtResource("5_qklc5")]
-texture = ExtResource("7_rv48e")
 
 [connection signal="pressed" from="Panel/Button2" to="." method="_on_button_2_pressed"]
 [connection signal="pressed" from="Panel/Button" to="." method="_on_button_pressed"]

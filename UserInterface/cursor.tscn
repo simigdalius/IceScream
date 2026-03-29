@@ -1,13 +1,13 @@
 [gd_scene format=3 uid="uid://ddpeawfaksrtl"]
 
-[ext_resource type="Texture2D" uid="uid://b7fk1rcwbk112" path="res://assets/wetransfer_happy-2-1-png_2026-03-25_2143/Drawing 17 (2).png" id="1_s8it2"]
+[ext_resource type="Texture2D" uid="uid://bhdf8ewe0vyue" path="res://assets/wetransfer_button-4-png_2026-03-27_0906/Drawing 17 (2).png" id="1_u24ul"]
 [ext_resource type="Script" uid="uid://bxs7eh1fjopl2" path="res://UserInterface/cursor.gd" id="2_u24ul"]
 
 [node name="Sprite2D" type="Sprite2D" unique_id=527202148]
 z_index = 4096
-position = Vector2(-40, 900)
+position = Vector2(-96, 56)
 rotation = -0.7853982
 scale = Vector2(0.035, 0.035)
-texture = ExtResource("1_s8it2")
+texture = ExtResource("1_u24ul")
 offset = Vector2(150, 180)
 script = ExtResource("2_u24ul")

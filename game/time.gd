@@ -1,11 +1,12 @@
 extends Node2D
-
+@onready var timer = $Timer
 var total_time = 60
 
 func _ready() -> void:
 	update_label_text() 
 	$Timer.start() 
-
+	$Panel2.hide()
+	$Panel2/Label.hide()
 func _on_timer_timeout() -> void:
 	if total_time > 0:
 		total_time -= 1
@@ -24,8 +25,8 @@ func update_label_text():
 func time_up():
 	$Timer.stop()
 	$time.text = "0"
-	$time.modulate = Color(1, 0, 0) # Έντονο κόκκινο
-	screen_shake() # Καλεί το τρέμουλο
+	$time.modulate = Color(1, 0, 0) 
+	screen_shake() 
 	if has_node("ready"):
 		$ready.show()
 	await get_tree().create_timer(2.0).timeout

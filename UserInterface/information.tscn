@@ -5,7 +5,6 @@
 [ext_resource type="Texture2D" uid="uid://cato80hem3pmy" path="res://assets/wetransfer_button-4-png_2026-03-27_0906/Delete  (2).png" id="4_uu8m7"]
 [ext_resource type="Texture2D" uid="uid://dns6hk8l11rf6" path="res://assets/wetransfer_button-4-png_2026-03-27_0906/Delete .png" id="5_1qjve"]
 [ext_resource type="PackedScene" uid="uid://ddpeawfaksrtl" path="res://UserInterface/cursor.tscn" id="6_ywq2a"]
-[ext_resource type="Texture2D" uid="uid://bhdf8ewe0vyue" path="res://assets/wetransfer_button-4-png_2026-03-27_0906/Drawing 17 (2).png" id="7_f4bg2"]
 [ext_resource type="Texture2D" uid="uid://dw03yqdsp4mhl" path="res://assets/wetransfer_button-4-png_2026-03-27_0906/Button (4).png" id="8_mmb7h"]
 [ext_resource type="Texture2D" uid="uid://dmyvhj121t1ca" path="res://assets/wetransfer_button-4-png_2026-03-27_0906/Button (3).png" id="9_pcs48"]
 [ext_resource type="Texture2D" uid="uid://jandaufrxh56" path="res://assets/wetransfer_happy-2-1-png_2026-03-25_2143/Button.png" id="10_6ignf"]
@@ -98,7 +97,6 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_ywq2a")
 layer = 120
 
 [node name="Sprite2D" parent="CanvasLayer" unique_id=527202148 instance=ExtResource("6_ywq2a")]
-texture = ExtResource("7_f4bg2")
 
 [node name="Panel2" type="Panel" parent="." unique_id=1180859727]
 layout_mode = 0
@@ -181,16 +179,16 @@ vertical_alignment = 1
 [node name="Label" type="Label" parent="how to play" unique_id=128380342]
 layout_mode = 0
 offset_left = 64.0
-offset_top = 64.0
+offset_top = 72.0
 offset_right = 920.0
-offset_bottom = 109.0
+offset_bottom = 117.0
 theme_override_colors/font_color = Color(0.52156866, 0.8352941, 0.9607843, 1)
 theme_override_constants/outline_size = 3
 theme_override_fonts/font = ExtResource("13_pcs48")
 theme_override_font_sizes/font_size = 14
-text = "EVERY MISS-CLICK, 
-TYPO, OR LOST ICON FILLS YOUR RAGE BAR.
-IF IT REACHES THE LIMIT, YOU LOSE!"
+text = "Every missclick, typo, or lost icon fills your Rage Bar.
+If it reaches the limit, you lose!
+Stay calm for 5 seconds to reduce your Rage."
 horizontal_alignment = 1
 
 [node name="Label2" type="Label" parent="how to play" unique_id=1520987189]

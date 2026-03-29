@@ -27,7 +27,7 @@ func _on_timer_timeout() -> void:
 	var popup_node = get_parent().get_node("popUP")
 	for item in spawn_list:
 		popup_node.add_child(item)
-		await get_tree().create_timer(randf_range(0.2, 0.4)).timeout
+		await get_tree().create_timer(randf_range(0.5, 0.8)).timeout
 	await get_tree().create_timer(randf_range(3, 3.5)).timeout
 	var objects_to_check = [ene, nu, nu2, nu3]
 	for obj in objects_to_check:

@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://ca6ro1q8k7aix"]
+
+[ext_resource type="Script" uid="uid://dtdifxlkukhi5" path="res://UserInterface/scenetransition.gd" id="1_0sg8r"]
+[ext_resource type="Texture2D" uid="uid://cy3kwk4ps6i0m" path="res://assets/wetransfer_happy-2-1-png_2026-03-25_2143/Popup.png" id="2_gmc8s"]
+[ext_resource type="Texture2D" uid="uid://40myhbcq4vtm" path="res://assets/wetransfer_happy-2-1-png_2026-03-25_2143/Mainmenu.png" id="3_y67nl"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_y67nl"]
+texture = ExtResource("2_gmc8s")
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=1796047565]
+process_mode = 3
+script = ExtResource("1_0sg8r")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1120270179]
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0, 0.07058824, 0.23921569, 1)
+
+[node name="Panel" type="Panel" parent="ColorRect" unique_id=29316744]
+layout_mode = 0
+offset_left = 400.0
+offset_top = 280.0
+offset_right = 744.0
+offset_bottom = 584.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_y67nl")
+
+[node name="Sprite2D" type="Sprite2D" parent="ColorRect" unique_id=2094993320]
+position = Vector2(576, 136)
+scale = Vector2(0.59335035, 0.6575342)
+texture = ExtResource("3_y67nl")
+region_enabled = true
+region_rect = Rect2(192.88113, 25.818268, 1564.6205, 365.68185)

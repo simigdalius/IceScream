@@ -15,9 +15,14 @@ run/main_scene="uid://dh8ni6g3kg8wj"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Scenetransition="*uid://ca6ro1q8k7aix"
+
 [display]
 
 mouse_cursor/custom_image="uid://b7fk1rcwbk112"
+mouse_cursor/custom_image_hotspot=Vector2(5, 3)
 
 [global_group]
 

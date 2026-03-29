@@ -2,19 +2,16 @@
 
 [ext_resource type="Texture2D" uid="uid://xs22avlvpqcb" path="res://assets/wetransfer_button-4-png_2026-03-27_0906/Two.png" id="1_yhtvt"]
 [ext_resource type="Script" uid="uid://cx55cp3kpcw4n" path="res://game/num_2.gd" id="2_5xmej"]
-[ext_resource type="Texture2D" uid="uid://de3h84yxnt24o" path="res://assets/wetransfer_button-4-png_2026-03-27_0906/One (2).png" id="3_1kvsx"]
+[ext_resource type="Texture2D" uid="uid://b6r3cl4xao4uc" path="res://assets/wetransfer_button-4-png_2026-03-27_0906/One (3).png" id="3_5xmej"]
 [ext_resource type="Texture2D" uid="uid://dq4r8wdjlhiqa" path="res://assets/wetransfer_button-4-png_2026-03-27_0906/One (4).png" id="4_4lfy7"]
 [ext_resource type="Texture2D" uid="uid://chetcqf1t1a8f" path="res://assets/wetransfer_button-4-png_2026-03-27_0906/One (5).png" id="5_tfome"]
 [ext_resource type="Texture2D" uid="uid://c4hlgprjke72g" path="res://assets/wetransfer_button-4-png_2026-03-27_0906/One (6).png" id="6_0gefe"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_d63yn"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_1kvsx"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_1kvsx")
-}, {
-"duration": 1.0,
-"texture": ExtResource("4_4lfy7")
+"texture": ExtResource("3_5xmej")
 }, {
 "duration": 1.0,
 "texture": ExtResource("4_4lfy7")
@@ -27,7 +24,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"fade2",
-"speed": 10.0
+"speed": 5.0
 }]
 
 [node name="Sprite2D" type="Sprite2D" unique_id=916167932]
@@ -37,7 +34,5 @@ script = ExtResource("2_5xmej")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1148114360]
 scale = Vector2(0.036, 0.036)
-sprite_frames = SubResource("SpriteFrames_d63yn")
+sprite_frames = SubResource("SpriteFrames_1kvsx")
 animation = &"fade2"
-frame = 4
-frame_progress = 1.0

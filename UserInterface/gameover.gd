@@ -12,8 +12,8 @@ func _process(delta: float) -> void:
 
 
 func _on_quit_pressed() -> void:
-	get_tree().change_scene_to_file("res://UserInterface/mainMenu.tscn")
+	Scenetransition.change_scene("res://UserInterface/mainMenu.tscn")
 
 
 func _on_ragequit_pressed() -> void:
-	get_tree().change_scene_to_file("res://UserInterface/endgame.tscn")
+	Scenetransition.change_scene("res://UserInterface/endgame.tscn")

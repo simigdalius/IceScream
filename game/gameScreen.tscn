@@ -11,14 +11,17 @@
 [ext_resource type="PackedScene" uid="uid://dce7t8fvaodx4" path="res://game/icescreamMan.tscn" id="6_k8nr6"]
 [ext_resource type="PackedScene" uid="uid://0fvchtuw8p7l" path="res://game/rage.tscn" id="7_hex6n"]
 [ext_resource type="PackedScene" uid="uid://c0g3elj7dho1b" path="res://game/num3.tscn" id="7_kog82"]
-[ext_resource type="Texture2D" uid="uid://bhdf8ewe0vyue" path="res://assets/wetransfer_button-4-png_2026-03-27_0906/Drawing 17 (2).png" id="7_sgwse"]
 [ext_resource type="FontFile" uid="uid://s3or5fmifr8i" path="res://assets/dogica/TTF/dogicabold.ttf" id="12_7ob2f"]
+[ext_resource type="Texture2D" uid="uid://cyyh584ukq7ol" path="res://assets/Message.png" id="13_ml75n"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jlapn"]
 texture = ExtResource("1_k8nr6")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ut7ke"]
 size = Vector2(1152, 637)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8ml5m"]
+texture = ExtResource("13_ml75n")
 
 [node name="Node2D" type="Node2D" unique_id=1720646014]
 script = ExtResource("1_ml75n")
@@ -57,13 +60,12 @@ position = Vector2(737.00006, 227)
 [node name="Node2D" parent="." unique_id=530930820 instance=ExtResource("2_rotdt")]
 light_mask = 2
 visibility_layer = 2
-position = Vector2(448, 255)
+position = Vector2(440, 296)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1355107246]
 layer = 120
 
 [node name="Sprite2D" parent="CanvasLayer" unique_id=527202148 groups=["rage"] instance=ExtResource("5_jlapn")]
-texture = ExtResource("7_sgwse")
 
 [node name="Control" parent="." unique_id=1541205762 instance=ExtResource("7_hex6n")]
 offset_left = 2.0
@@ -85,4 +87,127 @@ horizontal_alignment = 1
 
 [node name="Timer" type="Timer" parent="." unique_id=1118656628]
 
+[node name="Panel2" type="Panel" parent="." unique_id=1155125332]
+z_index = 2
+offset_left = 152.0
+offset_top = 8.0
+offset_right = 553.0
+offset_bottom = 164.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_8ml5m")
+
+[node name="Label" type="Label" parent="Panel2" unique_id=1053667025]
+layout_mode = 0
+offset_left = -48.0
+offset_top = 32.0
+offset_right = 456.0
+offset_bottom = 114.0
+theme_override_colors/font_color = Color(0.52156866, 0.8352941, 0.9607843, 1)
+theme_override_constants/line_spacing = 10
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("12_7ob2f")
+theme_override_font_sizes/font_size = 14
+text = "I SWEAR MY 7 YEAR OLD
+SON IS BETTER THAN
+YOU"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="Panel2" unique_id=225800281]
+layout_mode = 0
+offset_left = -48.0
+offset_top = 40.0
+offset_right = 456.0
+offset_bottom = 122.0
+theme_override_colors/font_color = Color(0.52156866, 0.8352941, 0.9607843, 1)
+theme_override_constants/line_spacing = 10
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("12_7ob2f")
+theme_override_font_sizes/font_size = 14
+text = "IS THIS YOUR BEST
+SHOT??? HAHAHAHAHA"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="Panel2" unique_id=1548039779]
+layout_mode = 0
+offset_left = -48.0
+offset_top = 32.0
+offset_right = 456.0
+offset_bottom = 114.0
+theme_override_colors/font_color = Color(0.52156866, 0.8352941, 0.9607843, 1)
+theme_override_constants/line_spacing = 10
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("12_7ob2f")
+theme_override_font_sizes/font_size = 14
+text = "COME ON TRY A LIL BIT 
+HARDER I'M GETTING
+BORED"
+horizontal_alignment = 1
+
+[node name="Label4" type="Label" parent="Panel2" unique_id=2011068831]
+layout_mode = 0
+offset_left = -48.0
+offset_top = 32.0
+offset_right = 456.0
+offset_bottom = 114.0
+theme_override_colors/font_color = Color(0.52156866, 0.8352941, 0.9607843, 1)
+theme_override_constants/line_spacing = 10
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("12_7ob2f")
+theme_override_font_sizes/font_size = 14
+text = "IS THAT IT?TRY A LITTLE 
+HARDER. I'M FALLING 
+ASLEEP"
+horizontal_alignment = 1
+
+[node name="Label5" type="Label" parent="Panel2" unique_id=391989657]
+layout_mode = 0
+offset_left = -48.0
+offset_top = 40.0
+offset_right = 456.0
+offset_bottom = 122.0
+theme_override_colors/font_color = Color(0.52156866, 0.8352941, 0.9607843, 1)
+theme_override_constants/line_spacing = 10
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("12_7ob2f")
+theme_override_font_sizes/font_size = 14
+text = "DO YOU EVEN WANT
+THIS ICE-SCREAM?
+"
+horizontal_alignment = 1
+
+[node name="Label6" type="Label" parent="Panel2" unique_id=431731379]
+layout_mode = 0
+offset_left = -56.0
+offset_top = 32.0
+offset_right = 448.0
+offset_bottom = 114.0
+theme_override_colors/font_color = Color(0.52156866, 0.8352941, 0.9607843, 1)
+theme_override_constants/line_spacing = 10
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("12_7ob2f")
+theme_override_font_sizes/font_size = 14
+text = "OH! NICE ONE.
+ I ALMOST STARTED 
+TRYING."
+horizontal_alignment = 1
+
+[node name="Label7" type="Label" parent="Panel2" unique_id=809063708]
+layout_mode = 0
+offset_left = -48.0
+offset_top = 32.0
+offset_right = 456.0
+offset_bottom = 114.0
+theme_override_colors/font_color = Color(0.52156866, 0.8352941, 0.9607843, 1)
+theme_override_constants/line_spacing = 10
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("12_7ob2f")
+theme_override_font_sizes/font_size = 13
+text = "YE.. YE.. I KNOW.
+ IT'S THE MOUSE'S FAULT ..
+TOTALLY NOT A SKILL ISSUE."
+horizontal_alignment = 1
+
+[node name="Timer2" type="Timer" parent="." unique_id=1492662483]
+wait_time = 5.0
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer2" to="Area2D" method="_on_timer_2_timeout"]

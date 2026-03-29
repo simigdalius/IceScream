@@ -7,10 +7,10 @@
 [ext_resource type="PackedScene" uid="uid://3tjbhqeo1ask" path="res://game/num2.tscn" id="4_1v5sa"]
 [ext_resource type="PackedScene" uid="uid://c0g3elj7dho1b" path="res://game/num3.tscn" id="5_5g4py"]
 [ext_resource type="PackedScene" uid="uid://ddpeawfaksrtl" path="res://UserInterface/cursor.tscn" id="6_xpmlw"]
-[ext_resource type="Texture2D" uid="uid://bhdf8ewe0vyue" path="res://assets/wetransfer_button-4-png_2026-03-27_0906/Drawing 17 (2).png" id="7_1v5sa"]
 [ext_resource type="Texture2D" uid="uid://n8xnogmidyl2" path="res://assets/wetransfer_happy-2-1-png_2026-03-25_2143/Angry.png" id="8_eovqx"]
 [ext_resource type="Texture2D" uid="uid://cyyh584ukq7ol" path="res://assets/Message.png" id="9_w2372"]
 [ext_resource type="FontFile" uid="uid://s3or5fmifr8i" path="res://assets/dogica/TTF/dogicabold.ttf" id="10_djdq8"]
+[ext_resource type="Texture2D" uid="uid://dfvorlkpedlck" path="res://assets/EndGame.png" id="11_w2372"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_eovqx"]
 texture = ExtResource("1_77rwp")
@@ -34,7 +34,7 @@ z_index = 20
 script = ExtResource("2_w2372")
 
 [node name="target" parent="popUP" unique_id=1659349752 instance=ExtResource("2_0ek8v")]
-position = Vector2(744.00006, 528)
+position = Vector2(552, 336)
 
 [node name="Sprite2D" parent="popUP" unique_id=431207482 instance=ExtResource("3_xpmlw")]
 position = Vector2(184, 480)
@@ -43,15 +43,15 @@ position = Vector2(184, 480)
 position = Vector2(1056, 408)
 
 [node name="Sprite2D3" parent="popUP" unique_id=1821175739 instance=ExtResource("5_5g4py")]
-position = Vector2(472, 528)
+position = Vector2(48.000008, 216.00002)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1971299672]
 layer = 120
 
 [node name="Sprite2D" parent="CanvasLayer" unique_id=527202148 instance=ExtResource("6_xpmlw")]
-texture = ExtResource("7_1v5sa")
 
 [node name="Panel3" type="Panel" parent="." unique_id=1139104768]
+z_index = 2
 offset_left = 640.0
 offset_top = 152.0
 offset_right = 934.0
@@ -59,6 +59,7 @@ offset_bottom = 544.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_ubsxs")
 
 [node name="Panel2" type="Panel" parent="." unique_id=834763256]
+z_index = 2
 offset_left = 320.0
 offset_top = 80.0
 offset_right = 704.0
@@ -79,3 +80,31 @@ theme_override_font_sizes/font_size = 14
 text = "WHAT DO YOU THINK
 YOU ARE DOING."
 horizontal_alignment = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1570181865]
+position = Vector2(54, 236.00002)
+scale = Vector2(0.5934066, 0.6804)
+texture = ExtResource("11_w2372")
+region_enabled = true
+region_rect = Rect2(0, 156.20801, 182.13037, 400.85132)
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=656262256]
+position = Vector2(1042, 343)
+scale = Vector2(0.5893747, 0.66238296)
+texture = ExtResource("11_w2372")
+region_enabled = true
+region_rect = Rect2(1663.5215, 193.93521, 200.42578, 641.3622)
+
+[node name="Sprite2D3" type="Sprite2D" parent="." unique_id=446458133]
+position = Vector2(256, 455.99997)
+scale = Vector2(0.71164024, 0.65824175)
+texture = ExtResource("11_w2372")
+region_enabled = true
+region_rect = Rect2(209.96875, 455.66757, 378.32782, 455.08414)
+
+[node name="Sprite2D4" type="Sprite2D" parent="." unique_id=687197379]
+position = Vector2(552, 344)
+scale = Vector2(0.52522427, 0.5927686)
+texture = ExtResource("11_w2372")
+region_enabled = true
+region_rect = Rect2(609.5181, 191.57724, 669.65765, 605.9929)

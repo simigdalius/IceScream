@@ -36,12 +36,16 @@ func update_bar(current: float, max_value: float):
 		if front_tween and front_tween.is_running(): front_tween.kill()
 		if back_tween and back_tween.is_running(): back_tween.kill()
 		
-		# Όταν θυμώνει, η μπάρα γεμίζει γρήγορα
 		front_tween = create_tween().set_parallel()
 		front_tween.tween_property(front_bar, "value", current, 0.25)
 		front_tween.tween_property(back_bar, "value", current, 0.25)
 		
 		_on_rage() 
+	else:
+		if front_tween and front_tween.is_running(): front_tween.kill()
+		front_tween = create_tween()
+		front_tween.tween_property(front_bar, "value", current, 0.2)
+		_on_heal() # Καλεί το πράσινο flash που ήδη έφτιαξες!
 
 	current_pct = pct
 	_check_pulse(pct)
@@ -87,6 +91,10 @@ func _check_pulse(pct: float) -> void:
 
 func add_rage(amount: float):
 	var new_value = back_bar.value + amount
+	update_bar(new_value, back_bar.max_value)
+
+func remove_rage(amount: float):
+	var new_value = back_bar.value - amount
 	update_bar(new_value, back_bar.max_value)
 
 func gameover():
