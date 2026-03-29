@@ -21,8 +21,7 @@ Scenetransition="*uid://ca6ro1q8k7aix"
 
 [display]
 
-mouse_cursor/custom_image="uid://b7fk1rcwbk112"
-mouse_cursor/custom_image_hotspot=Vector2(5, 3)
+mouse_cursor/custom_image="uid://bhdf8ewe0vyue"
 
 [global_group]
 

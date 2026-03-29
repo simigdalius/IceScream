@@ -209,5 +209,11 @@ horizontal_alignment = 1
 [node name="Timer2" type="Timer" parent="." unique_id=1492662483]
 wait_time = 5.0
 
+[node name="lathosclick" type="AudioStreamPlayer" parent="." unique_id=52237366]
+
+[node name="swstoclick" type="AudioStreamPlayer" parent="." unique_id=1153456443]
+
+[node name="music" type="AudioStreamPlayer" parent="." unique_id=1486951290]
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="Timer2" to="Area2D" method="_on_timer_2_timeout"]

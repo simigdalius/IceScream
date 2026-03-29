@@ -19,38 +19,40 @@ func _ready() -> void:
 	front_bar.max_value = 100
 	back_bar.max_value = 100
 
-func _input(event):
-	if event is InputEventKey:
-		if event.is_pressed() and event.keycode == KEY_SPACE:
-			add_rage(10.0)
-
 func update_bar(current: float, max_value: float):
 	var pct = clamp(current / max_value, 0.0, 1.0)
 	front_bar.max_value = max_value
 	back_bar.max_value = max_value
 	
-	var is_rage_increase = pct > current_pct 
-
+	var is_rage_increase = pct > current_pct # Το Rage ΑΝΕΒΑΙΝΕΙ (Missclick ή Timeout)
+	var is_calm_down = pct < current_pct     # Το Rage ΠΕΦΤΕΙ (π.χ. σωστό κλικ)
 	
 	if is_rage_increase:
 		if front_tween and front_tween.is_running(): front_tween.kill()
 		if back_tween and back_tween.is_running(): back_tween.kill()
 		
+		# Όταν θυμώνει, η μπάρα γεμίζει γρήγορα
 		front_tween = create_tween().set_parallel()
 		front_tween.tween_property(front_bar, "value", current, 0.25)
 		front_tween.tween_property(back_bar, "value", current, 0.25)
 		
-		_on_rage() 
-	else:
+		_on_rage() # Καλεί το shake και το κόκκινο χρώμα!
+		
+	elif is_calm_down:
 		if front_tween and front_tween.is_running(): front_tween.kill()
-		front_tween = create_tween()
-		front_tween.tween_property(front_bar, "value", current, 0.2)
-		_on_heal() # Καλεί το πράσινο flash που ήδη έφτιαξες!
-
+		if back_tween and back_tween.is_running(): back_tween.kill()
+		
+		# Όταν ηρεμεί, η μπροστά μπάρα πέφτει αμέσως και η πίσω ακολουθεί (trail effect)
+		front_bar.value = current
+		back_tween = create_tween()
+		back_tween.tween_property(back_bar, "value", current, 0.45)
+		
+		_on_heal() # Καλεί το πράσινο χρώμα
+		
 	current_pct = pct
 	_check_pulse(pct)
-	
-	if current>= max_value:
+	if current >= max_value:
+		await get_tree().create_timer(0.3).timeout
 		gameover()
 
 func _shake():
@@ -74,6 +76,7 @@ func _on_heal():
 	_flash(Color(0.3, 1, 0.3)) # Πράσινο
 
 func _check_pulse(pct: float) -> void:
+	# Άλλαξα τη λογική: Το pulse ξεκινάει όταν το Rage είναι ΚΡΙΣΙΜΑ ΨΗΛΑ (πάνω από 75%)
 	if pct >= 0.75 and low_rage_pulse:
 		if pulse_tween == null or not pulse_tween.is_running():
 			if pulse_tween:
@@ -93,9 +96,10 @@ func add_rage(amount: float):
 	var new_value = back_bar.value + amount
 	update_bar(new_value, back_bar.max_value)
 
+# Πρόσθεσα και αυτή τη συνάρτηση σε περίπτωση που θες να αφαιρείς rage με σωστά clicks!
 func remove_rage(amount: float):
 	var new_value = back_bar.value - amount
 	update_bar(new_value, back_bar.max_value)
 
 func gameover():
-	get_tree().change_scene_to_file("res://UserInterface/gameover.tscn")
+	Scenetransition.change_scene("res://UserInterface/gameover.tscn")

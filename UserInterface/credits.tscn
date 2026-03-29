@@ -95,10 +95,10 @@ theme_override_constants/line_spacing = 10
 theme_override_constants/outline_size = 5
 theme_override_fonts/font = ExtResource("5_eu2ed")
 text = "A GAME MADE BY SIMIGALIUS
-Game Design / Programming, Art / Sprites, 
-Music / Sound Effects
+Game Design / Programming, Art / Sprites,
 Writing 
 
+Music:
 Fonts: DOGICA Roberto Mocci"
 horizontal_alignment = 1
 
@@ -156,7 +156,7 @@ theme_override_colors/font_color = Color(0.52156866, 0.8352941, 0.9607843, 1)
 theme_override_constants/outline_size = 3
 theme_override_fonts/font = ExtResource("5_eu2ed")
 theme_override_font_sizes/font_size = 14
-text = "AUDIO: BEEPBOX
+text = "AUDIO: ITCH.io
 FONTS: DAFONT"
 horizontal_alignment = 1
 
