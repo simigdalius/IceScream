@@ -2,7 +2,7 @@ extends Area2D
 
 var z: int = 0  
 var labels: Array = []
-
+@onready var lathos =$"../lathosclick"
 @onready var panel2 = $"../Panel2"
 @onready var timer = $Timer
 func _ready() -> void:
@@ -30,6 +30,7 @@ func _input(event: InputEvent) -> void:
 	
 	for action in rage_actions:
 		if event.is_action_pressed(action):
+			lathos.play()
 			get_tree().call_group("rage", "add_rage", 10.0)
 			
 			if action == "click":

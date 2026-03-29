@@ -6,7 +6,9 @@
 [ext_resource type="Texture2D" uid="uid://bj1mwvmhkx6h7" path="res://assets/wetransfer_button-4-png_2026-03-27_0906/Button (2).png" id="4_n4v26"]
 [ext_resource type="FontFile" uid="uid://s3or5fmifr8i" path="res://assets/dogica/TTF/dogicabold.ttf" id="5_eu2ed"]
 [ext_resource type="Texture2D" uid="uid://jandaufrxh56" path="res://assets/wetransfer_happy-2-1-png_2026-03-25_2143/Button.png" id="6_djk8w"]
+[ext_resource type="AudioStream" uid="uid://dm88cxhh4oar" path="res://assets/UIClick_BLEEOOP_Baby_Click.ogg" id="9_n4v26"]
 [ext_resource type="Texture2D" uid="uid://cato80hem3pmy" path="res://assets/wetransfer_button-4-png_2026-03-27_0906/Delete  (2).png" id="9_vdshe"]
+[ext_resource type="AudioStream" uid="uid://cgr4ywtugkmon" path="res://assets/Track 4 (The Cafe).wav" id="10_eu2ed"]
 [ext_resource type="Texture2D" uid="uid://dns6hk8l11rf6" path="res://assets/wetransfer_button-4-png_2026-03-27_0906/Delete .png" id="10_ma6rj"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vdshe"]
@@ -97,8 +99,8 @@ theme_override_fonts/font = ExtResource("5_eu2ed")
 text = "A GAME MADE BY SIMIGALIUS
 Game Design / Programming, Art / Sprites,
 Writing 
-
-Music:
+Sfx sounds: Bleeoop.com
+Music: Zakiro (panorama and the cafe)
 Fonts: DOGICA Roberto Mocci"
 horizontal_alignment = 1
 
@@ -228,5 +230,14 @@ theme_override_font_sizes/font_size = 16
 theme_override_styles/normal = SubResource("StyleBoxTexture_ms27i")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_hb7ru")
 theme_override_styles/hover = SubResource("StyleBoxTexture_gx2dh")
+
+[node name="swstoclick" type="AudioStreamPlayer" parent="." unique_id=576914915]
+stream = ExtResource("9_n4v26")
+volume_db = -12.0
+
+[node name="music" type="AudioStreamPlayer" parent="." unique_id=235871266]
+stream = ExtResource("10_eu2ed")
+volume_db = -16.0
+autoplay = true
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

@@ -1,8 +1,10 @@
 extends Node2D
 
 var parent_node
+@onready var music = $"../music"
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	music.play()
 	parent_node = get_parent().get_node("popUP")
 	$"../Sprite2D".hide()
 	$"../Sprite2D2".hide()

@@ -1,8 +1,26 @@
 extends Node2D
 @onready var timer = $Timer
 var total_time = 60
+@onready var music = $music
+
+
+func _input(event):
+	if event.is_action_pressed("ui_cancel"): # Το ESC εξ ορισμού
+		if get_tree().paused:
+			unpause()
+		else:
+			pause()
+
+func pause():
+	get_tree().paused = true
+	$Control2.show()
+
+func unpause():
+	$Control2.hide()
+	get_tree().paused = false
 
 func _ready() -> void:
+	music.play()
 	update_label_text() 
 	$Timer.start() 
 	$Panel2.hide()
@@ -39,3 +57,7 @@ func screen_shake():
 	for i in range(5):
 		shake_tween.tween_property(label, "position", original_pos + Vector2(randf_range(-5, 5), randf_range(-3, 3)), 0.05)
 		shake_tween.tween_property(label, "position", original_pos, 0.05)
+
+
+func _on_button_pressed() -> void:
+		pause()

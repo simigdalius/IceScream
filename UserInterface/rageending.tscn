@@ -7,6 +7,8 @@
 [ext_resource type="FontFile" uid="uid://s3or5fmifr8i" path="res://assets/dogica/TTF/dogicabold.ttf" id="6_dgja8"]
 [ext_resource type="Texture2D" uid="uid://jandaufrxh56" path="res://assets/wetransfer_happy-2-1-png_2026-03-25_2143/Button.png" id="7_c0wyp"]
 [ext_resource type="Texture2D" uid="uid://bj1mwvmhkx6h7" path="res://assets/wetransfer_button-4-png_2026-03-27_0906/Button (2).png" id="8_36ypp"]
+[ext_resource type="AudioStream" uid="uid://c7j1xv84hgy6y" path="res://assets/Track 7 (Panorama).wav" id="8_dgja8"]
+[ext_resource type="AudioStream" uid="uid://cgr4ywtugkmon" path="res://assets/Track 4 (The Cafe).wav" id="9_c0wyp"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_u65fj"]
 texture = ExtResource("2_p8iy2")
@@ -92,5 +94,14 @@ text = "YOU AIN'T THAT LITTLE
 AFTER ALL"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="swstoclick" type="AudioStreamPlayer" parent="." unique_id=521152380]
+stream = ExtResource("8_dgja8")
+volume_db = -12.0
+
+[node name="music" type="AudioStreamPlayer" parent="." unique_id=1133193936]
+stream = ExtResource("9_c0wyp")
+volume_db = -16.0
+autoplay = true
 
 [connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]

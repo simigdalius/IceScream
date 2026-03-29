@@ -3,13 +3,14 @@
 [ext_resource type="Script" uid="uid://nfxxf7w4ws8u" path="res://UserInterface/winner.gd" id="1_1bopx"]
 [ext_resource type="Texture2D" uid="uid://ju1gu4le0n5k" path="res://assets/wetransfer_happy-2-1-png_2026-03-25_2143/GameScreen.png" id="1_rnxuv"]
 [ext_resource type="PackedScene" uid="uid://ddpeawfaksrtl" path="res://UserInterface/cursor.tscn" id="2_dtg64"]
-[ext_resource type="Texture2D" uid="uid://bhdf8ewe0vyue" path="res://assets/wetransfer_button-4-png_2026-03-27_0906/Drawing 17 (2).png" id="3_yfl3x"]
 [ext_resource type="FontFile" uid="uid://s3or5fmifr8i" path="res://assets/dogica/TTF/dogicabold.ttf" id="4_tw1dw"]
 [ext_resource type="Texture2D" uid="uid://jandaufrxh56" path="res://assets/wetransfer_happy-2-1-png_2026-03-25_2143/Button.png" id="5_1bopx"]
 [ext_resource type="Texture2D" uid="uid://bj1mwvmhkx6h7" path="res://assets/wetransfer_button-4-png_2026-03-27_0906/Button (2).png" id="6_x64d0"]
 [ext_resource type="Texture2D" uid="uid://brw0hyc8u2gxn" path="res://assets/wetransfer_happy-2-1-png_2026-03-25_2143/Happy (2).png" id="7_kwum6"]
 [ext_resource type="Texture2D" uid="uid://vf3tdkdmagr3" path="res://assets/wetransfer_happy-2-1-png_2026-03-25_2143/Ingame.png" id="8_c4043"]
 [ext_resource type="Texture2D" uid="uid://cyyh584ukq7ol" path="res://assets/Message.png" id="9_x3wuf"]
+[ext_resource type="AudioStream" uid="uid://dm88cxhh4oar" path="res://assets/UIClick_BLEEOOP_Baby_Click.ogg" id="10_d1xwf"]
+[ext_resource type="AudioStream" uid="uid://cgr4ywtugkmon" path="res://assets/Track 4 (The Cafe).wav" id="11_1pd40"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3xgi2"]
 texture = ExtResource("1_rnxuv")
@@ -51,7 +52,6 @@ theme_override_styles/panel = SubResource("StyleBoxTexture_3xgi2")
 layer = 120
 
 [node name="Sprite2D" parent="CanvasLayer" unique_id=527202148 instance=ExtResource("2_dtg64")]
-texture = ExtResource("3_yfl3x")
 
 [node name="quit" type="Button" parent="." unique_id=1452601138]
 layout_mode = 0
@@ -143,5 +143,14 @@ text = "THATS WHAT I CALL LUCK
 NEXT TIME 
 I WONT LET YOU WIN"
 horizontal_alignment = 1
+
+[node name="swstoclick" type="AudioStreamPlayer" parent="." unique_id=1422274730]
+stream = ExtResource("10_d1xwf")
+volume_db = -16.0
+
+[node name="music" type="AudioStreamPlayer" parent="." unique_id=1109456492]
+stream = ExtResource("11_1pd40")
+volume_db = -16.0
+autoplay = true
 
 [connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]

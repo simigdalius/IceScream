@@ -1,0 +1,305 @@
+[gd_scene format=3 uid="uid://c07474sel6sbt"]
+
+[ext_resource type="Script" uid="uid://bg3qnikggduix" path="res://UserInterface/paused.gd" id="1_radj4"]
+[ext_resource type="FontFile" uid="uid://s3or5fmifr8i" path="res://assets/dogica/TTF/dogicabold.ttf" id="2_radj4"]
+[ext_resource type="Texture2D" uid="uid://jandaufrxh56" path="res://assets/wetransfer_happy-2-1-png_2026-03-25_2143/Button.png" id="3_b362l"]
+[ext_resource type="Texture2D" uid="uid://bj1mwvmhkx6h7" path="res://assets/wetransfer_button-4-png_2026-03-27_0906/Button (2).png" id="4_himeq"]
+[ext_resource type="Texture2D" uid="uid://bxwnu5m5shwm5" path="res://assets/wetransfer_button-4-png_2026-03-27_0906/Button.png" id="5_m38a5"]
+[ext_resource type="Texture2D" uid="uid://bxgrbcrfmrdek" path="res://assets/wetransfer_button-4-png_2026-03-27_0906/One.png" id="6_6hg7l"]
+[ext_resource type="Texture2D" uid="uid://xs22avlvpqcb" path="res://assets/wetransfer_button-4-png_2026-03-27_0906/Two.png" id="7_6oipx"]
+[ext_resource type="Texture2D" uid="uid://dmyvhj121t1ca" path="res://assets/wetransfer_button-4-png_2026-03-27_0906/Button (3).png" id="8_mll8r"]
+[ext_resource type="Texture2D" uid="uid://bnpkayaq0ltrx" path="res://assets/wetransfer_button-4-png_2026-03-27_0906/Three.png" id="9_hmnx2"]
+[ext_resource type="Texture2D" uid="uid://dw03yqdsp4mhl" path="res://assets/wetransfer_button-4-png_2026-03-27_0906/Button (4).png" id="10_kdsc5"]
+[ext_resource type="Texture2D" uid="uid://ctk040od1y0me" path="res://assets/wetransfer_button-4-png_2026-03-27_0906/Mouse.png" id="11_gsmh6"]
+[ext_resource type="Texture2D" uid="uid://cy3kwk4ps6i0m" path="res://assets/wetransfer_happy-2-1-png_2026-03-25_2143/Popup.png" id="12_x4x5a"]
+[ext_resource type="PackedScene" uid="uid://exsoxlnabw1x" path="res://UserInterface/audio.tscn" id="13_b362l"]
+[ext_resource type="PackedScene" uid="uid://ddpeawfaksrtl" path="res://UserInterface/cursor.tscn" id="14_b362l"]
+[ext_resource type="AudioStream" uid="uid://dm88cxhh4oar" path="res://assets/UIClick_BLEEOOP_Baby_Click.ogg" id="15_m38a5"]
+[ext_resource type="AudioStream" uid="uid://cgr4ywtugkmon" path="res://assets/Track 4 (The Cafe).wav" id="16_6hg7l"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_knrya"]
+texture = ExtResource("4_himeq")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_i6ofw"]
+texture = ExtResource("3_b362l")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_awjrx"]
+texture = ExtResource("5_m38a5")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4ubgd"]
+texture = ExtResource("6_6hg7l")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ymqg2"]
+texture = ExtResource("7_6oipx")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_c2wwb"]
+texture = ExtResource("8_mll8r")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tm0cx"]
+texture = ExtResource("9_hmnx2")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_b3h20"]
+texture = ExtResource("10_kdsc5")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_a7uf1"]
+texture = ExtResource("11_gsmh6")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1lr0y"]
+texture = ExtResource("12_x4x5a")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3gxd1"]
+texture = ExtResource("3_b362l")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0qdgi"]
+texture = ExtResource("4_himeq")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_to01p"]
+texture = ExtResource("4_himeq")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_a8ipn"]
+texture = ExtResource("4_himeq")
+
+[node name="Control" type="Control" unique_id=1095595894]
+process_mode = 2
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_radj4")
+
+[node name="how to play" type="Panel" parent="." unique_id=672251781]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 112.0
+offset_right = 1048.0
+offset_bottom = 472.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_knrya")
+
+[node name="Panel" type="Panel" parent="how to play" unique_id=727051028]
+layout_mode = 0
+offset_left = 304.0
+offset_right = 656.0
+offset_bottom = 56.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_i6ofw")
+
+[node name="Label" type="Label" parent="how to play/Panel" unique_id=862161989]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 8.0
+offset_right = 328.0
+offset_bottom = 48.0
+theme_override_colors/font_color = Color(0.52156866, 0.8352941, 0.9607843, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0.43529412, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("2_radj4")
+theme_override_font_sizes/font_size = 25
+text = "HOW TO PLAY"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="how to play" unique_id=1731874890]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 80.0
+offset_right = 920.0
+offset_bottom = 125.0
+theme_override_colors/font_color = Color(0.52156866, 0.8352941, 0.9607843, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_radj4")
+theme_override_font_sizes/font_size = 14
+text = "Every missclick, typo, or lost icon fills your Rage Bar.
+If it reaches the limit, you lose!
+Stay calm for 5 seconds to reduce your Rage."
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="how to play" unique_id=1908352724]
+layout_mode = 0
+offset_left = 104.0
+offset_top = 192.0
+offset_right = 440.0
+offset_bottom = 204.0
+theme_override_colors/font_color = Color(0.52156866, 0.8352941, 0.9607843, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_radj4")
+theme_override_font_sizes/font_size = 13
+text = "FOR    YOU AIM AND PRESS"
+
+[node name="press3" type="Panel" parent="how to play/Label2" unique_id=1057688275]
+layout_mode = 0
+offset_left = 320.0
+offset_top = -8.0
+offset_right = 352.0
+offset_bottom = 24.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_awjrx")
+
+[node name="Panel2" type="Panel" parent="how to play/Label2" unique_id=105699429]
+layout_mode = 0
+offset_left = 48.0
+offset_top = -8.0
+offset_right = 88.0
+offset_bottom = 24.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_4ubgd")
+
+[node name="Label3" type="Label" parent="how to play" unique_id=778282216]
+layout_mode = 0
+offset_left = 528.0
+offset_top = 152.0
+offset_right = 864.0
+offset_bottom = 164.0
+theme_override_colors/font_color = Color(0.52156866, 0.8352941, 0.9607843, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_radj4")
+theme_override_font_sizes/font_size = 13
+text = "FOR    YOU AIM AND PRESS"
+
+[node name="Panel3" type="Panel" parent="how to play/Label3" unique_id=1806466046]
+layout_mode = 0
+offset_left = 44.0
+offset_top = -8.0
+offset_right = 84.0
+offset_bottom = 24.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_ymqg2")
+
+[node name="press2" type="Panel" parent="how to play/Label3" unique_id=601425068]
+layout_mode = 0
+offset_left = 320.0
+offset_top = -8.0
+offset_right = 352.0
+offset_bottom = 24.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_c2wwb")
+
+[node name="Label4" type="Label" parent="how to play" unique_id=1572772662]
+layout_mode = 0
+offset_left = 528.0
+offset_top = 192.0
+offset_right = 864.0
+offset_bottom = 204.0
+theme_override_colors/font_color = Color(0.52156866, 0.8352941, 0.9607843, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_radj4")
+theme_override_font_sizes/font_size = 13
+text = "FOR    YOU AIM AND PRESS"
+
+[node name="Panel4" type="Panel" parent="how to play/Label4" unique_id=1306611222]
+layout_mode = 0
+offset_left = 44.0
+offset_top = -8.0
+offset_right = 84.0
+offset_bottom = 24.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_tm0cx")
+
+[node name="press1" type="Panel" parent="how to play/Label4" unique_id=786689566]
+layout_mode = 0
+offset_left = 320.0
+offset_top = -8.0
+offset_right = 352.0
+offset_bottom = 24.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_b3h20")
+
+[node name="Label5" type="Label" parent="how to play" unique_id=72781241]
+layout_mode = 0
+offset_left = 104.0
+offset_top = 152.0
+offset_right = 440.0
+offset_bottom = 164.0
+theme_override_colors/font_color = Color(0.52156866, 0.8352941, 0.9607843, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_radj4")
+theme_override_font_sizes/font_size = 13
+text = "FOR    YOU AIM AND PRESS"
+
+[node name="mouse" type="Panel" parent="how to play/Label5" unique_id=851895535]
+layout_mode = 0
+offset_left = 320.0
+offset_top = -8.0
+offset_right = 352.0
+offset_bottom = 24.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_a7uf1")
+
+[node name="Panel5" type="Panel" parent="how to play/Label5" unique_id=1141476728]
+layout_mode = 0
+offset_left = 48.0
+offset_top = -8.0
+offset_right = 88.0
+offset_bottom = 24.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_1lr0y")
+
+[node name="Button3" type="Button" parent="how to play" unique_id=941392377]
+process_mode = 2
+layout_mode = 0
+offset_left = 576.0
+offset_top = 224.0
+offset_right = 832.0
+offset_bottom = 304.0
+theme_override_colors/font_color = Color(0.13725491, 0.13725491, 0.5411765, 1)
+theme_override_colors/font_hover_color = Color(0.52156866, 0.8352941, 0.9607843, 1)
+theme_override_fonts/font = ExtResource("2_radj4")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxTexture_3gxd1")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_0qdgi")
+theme_override_styles/hover = SubResource("StyleBoxTexture_to01p")
+text = "EXIT"
+
+[node name="Button2" type="Button" parent="how to play" unique_id=1687699047]
+process_mode = 2
+layout_mode = 0
+offset_left = 192.0
+offset_top = 224.0
+offset_right = 448.0
+offset_bottom = 304.0
+theme_override_colors/font_color = Color(0.13725491, 0.13725491, 0.5411765, 1)
+theme_override_colors/font_hover_color = Color(0.52156866, 0.8352941, 0.9607843, 1)
+theme_override_fonts/font = ExtResource("2_radj4")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxTexture_3gxd1")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_0qdgi")
+theme_override_styles/hover = SubResource("StyleBoxTexture_to01p")
+text = "RESUME"
+
+[node name="TextureButton" parent="how to play/Button2" unique_id=699205839 instance=ExtResource("13_b362l")]
+layout_mode = 0
+offset_left = 280.0
+offset_right = 2120.0
+offset_bottom = 1000.0
+
+[node name="Panel2" type="Panel" parent="." unique_id=1556356874]
+layout_mode = 0
+offset_left = 344.0
+offset_top = 88.0
+offset_right = 792.0
+offset_bottom = 180.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_a8ipn")
+
+[node name="Label" type="Label" parent="Panel2" unique_id=1923774740]
+layout_mode = 0
+offset_left = -176.0
+offset_top = 32.0
+offset_right = 628.0
+offset_bottom = 146.0
+theme_override_colors/font_color = Color(0.5223399, 0.8334457, 0.96226186, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0.43529412, 1)
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = ExtResource("2_radj4")
+theme_override_font_sizes/font_size = 32
+text = "PAUSED"
+horizontal_alignment = 1
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=75688377]
+layer = 120
+
+[node name="Sprite2D" parent="CanvasLayer" unique_id=527202148 instance=ExtResource("14_b362l")]
+
+[node name="swstoclick" type="AudioStreamPlayer" parent="." unique_id=1686124645]
+stream = ExtResource("15_m38a5")
+volume_db = -12.0
+autoplay = true
+
+[node name="music" type="AudioStreamPlayer" parent="." unique_id=510569815]
+stream = ExtResource("16_6hg7l")
+volume_db = -16.0
+autoplay = true
+
+[connection signal="pressed" from="how to play/Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="how to play/Button2" to="." method="_on_button_2_pressed"]

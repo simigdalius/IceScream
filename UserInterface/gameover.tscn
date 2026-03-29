@@ -8,7 +8,8 @@
 [ext_resource type="Texture2D" uid="uid://jandaufrxh56" path="res://assets/wetransfer_happy-2-1-png_2026-03-25_2143/Button.png" id="5_p64yp"]
 [ext_resource type="Texture2D" uid="uid://bj1mwvmhkx6h7" path="res://assets/wetransfer_button-4-png_2026-03-27_0906/Button (2).png" id="6_vfbe2"]
 [ext_resource type="PackedScene" uid="uid://ddpeawfaksrtl" path="res://UserInterface/cursor.tscn" id="7_us4iy"]
-[ext_resource type="Texture2D" uid="uid://bhdf8ewe0vyue" path="res://assets/wetransfer_button-4-png_2026-03-27_0906/Drawing 17 (2).png" id="8_r2rbn"]
+[ext_resource type="AudioStream" uid="uid://dm88cxhh4oar" path="res://assets/UIClick_BLEEOOP_Baby_Click.ogg" id="9_r2rbn"]
+[ext_resource type="AudioStream" uid="uid://cgr4ywtugkmon" path="res://assets/Track 4 (The Cafe).wav" id="10_birc3"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1pd2h"]
 texture = ExtResource("1_0nm50")
@@ -110,7 +111,15 @@ text = "RAGE QUIT"
 layer = 120
 
 [node name="Sprite2D" parent="CanvasLayer" unique_id=527202148 groups=["rage"] instance=ExtResource("7_us4iy")]
-texture = ExtResource("8_r2rbn")
+
+[node name="swstoclick" type="AudioStreamPlayer" parent="." unique_id=2038167967]
+stream = ExtResource("9_r2rbn")
+volume_db = -16.0
+
+[node name="music" type="AudioStreamPlayer" parent="." unique_id=1191413587]
+stream = ExtResource("10_birc3")
+volume_db = -16.0
+autoplay = true
 
 [connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]
 [connection signal="pressed" from="RAGEQUIT" to="." method="_on_ragequit_pressed"]

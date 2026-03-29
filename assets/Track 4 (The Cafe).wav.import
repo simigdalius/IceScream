@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cgr4ywtugkmon"
+path="res://.godot/imported/Track 4 (The Cafe).wav-1e7a0d78cda49daaa7a75089bf0406d7.sample"
+
+[deps]
+
+source_file="res://assets/Track 4 (The Cafe).wav"
+dest_files=["res://.godot/imported/Track 4 (The Cafe).wav-1e7a0d78cda49daaa7a75089bf0406d7.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

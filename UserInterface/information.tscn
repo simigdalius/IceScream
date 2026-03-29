@@ -15,6 +15,8 @@
 [ext_resource type="Texture2D" uid="uid://xs22avlvpqcb" path="res://assets/wetransfer_button-4-png_2026-03-27_0906/Two.png" id="13_3l1ci"]
 [ext_resource type="FontFile" uid="uid://s3or5fmifr8i" path="res://assets/dogica/TTF/dogicabold.ttf" id="13_pcs48"]
 [ext_resource type="Texture2D" uid="uid://bnpkayaq0ltrx" path="res://assets/wetransfer_button-4-png_2026-03-27_0906/Three.png" id="15_x8ngd"]
+[ext_resource type="AudioStream" uid="uid://dm88cxhh4oar" path="res://assets/UIClick_BLEEOOP_Baby_Click.ogg" id="17_7d783"]
+[ext_resource type="AudioStream" uid="uid://cgr4ywtugkmon" path="res://assets/Track 4 (The Cafe).wav" id="18_6ignf"]
 [ext_resource type="Texture2D" uid="uid://cy3kwk4ps6i0m" path="res://assets/wetransfer_happy-2-1-png_2026-03-25_2143/Popup.png" id="18_qdlsy"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_a2d7x"]
@@ -82,7 +84,7 @@ theme_override_styles/panel = SubResource("StyleBoxTexture_a2d7x")
 
 [node name="Button" type="Button" parent="." unique_id=954346101 groups=["rage"]]
 layout_mode = 0
-offset_left = 1032.0
+offset_left = 1040.0
 offset_top = 24.0
 offset_right = 1120.0
 offset_bottom = 104.0
@@ -149,9 +151,9 @@ horizontal_alignment = 1
 [node name="how to play" type="Panel" parent="." unique_id=788147419]
 layout_mode = 0
 offset_left = 96.0
-offset_top = 328.0
+offset_top = 312.0
 offset_right = 1080.0
-offset_bottom = 592.0
+offset_bottom = 576.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_wjhrl")
 
 [node name="Panel" type="Panel" parent="how to play" unique_id=1167988766]
@@ -302,5 +304,14 @@ offset_top = -8.0
 offset_right = 88.0
 offset_bottom = 24.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_r34eu")
+
+[node name="swstoclick" type="AudioStreamPlayer" parent="." unique_id=35895897]
+stream = ExtResource("17_7d783")
+volume_db = -12.0
+
+[node name="music" type="AudioStreamPlayer" parent="." unique_id=834621193]
+stream = ExtResource("18_6ignf")
+volume_db = -16.0
+autoplay = true
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

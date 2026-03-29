@@ -13,6 +13,12 @@
 [ext_resource type="PackedScene" uid="uid://c0g3elj7dho1b" path="res://game/num3.tscn" id="7_kog82"]
 [ext_resource type="FontFile" uid="uid://s3or5fmifr8i" path="res://assets/dogica/TTF/dogicabold.ttf" id="12_7ob2f"]
 [ext_resource type="Texture2D" uid="uid://cyyh584ukq7ol" path="res://assets/Message.png" id="13_ml75n"]
+[ext_resource type="AudioStream" uid="uid://dm88cxhh4oar" path="res://assets/UIClick_BLEEOOP_Baby_Click.ogg" id="14_8ml5m"]
+[ext_resource type="AudioStream" uid="uid://h4roihf76xuf" path="res://assets/UIClick_BLEEOOP_Button_Solid.ogg" id="14_ahxh1"]
+[ext_resource type="AudioStream" uid="uid://c7j1xv84hgy6y" path="res://assets/Track 7 (Panorama).wav" id="16_ueske"]
+[ext_resource type="Texture2D" uid="uid://bqluawdntw7d4" path="res://assets/wetransfer_button-4-png_2026-03-27_0906/Pause .png" id="17_q8f5k"]
+[ext_resource type="Texture2D" uid="uid://bsv7yo4b6wl2i" path="res://assets/wetransfer_button-4-png_2026-03-27_0906/Pausehover.png" id="18_p3qvb"]
+[ext_resource type="PackedScene" uid="uid://c07474sel6sbt" path="res://UserInterface/paused.tscn" id="19_p3qvb"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jlapn"]
 texture = ExtResource("1_k8nr6")
@@ -22,6 +28,15 @@ size = Vector2(1152, 637)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8ml5m"]
 texture = ExtResource("13_ml75n")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0scu0"]
+texture = ExtResource("17_q8f5k")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_w2jb1"]
+texture = ExtResource("18_p3qvb")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4850u"]
+texture = ExtResource("18_p3qvb")
 
 [node name="Node2D" type="Node2D" unique_id=1720646014]
 script = ExtResource("1_ml75n")
@@ -210,10 +225,30 @@ horizontal_alignment = 1
 wait_time = 5.0
 
 [node name="lathosclick" type="AudioStreamPlayer" parent="." unique_id=52237366]
+stream = ExtResource("14_ahxh1")
+volume_db = -12.0
 
 [node name="swstoclick" type="AudioStreamPlayer" parent="." unique_id=1153456443]
+stream = ExtResource("14_8ml5m")
+volume_db = -12.0
 
 [node name="music" type="AudioStreamPlayer" parent="." unique_id=1486951290]
+stream = ExtResource("16_ueske")
+volume_db = -16.0
+
+[node name="Button" type="Button" parent="." unique_id=926742002]
+process_mode = 3
+offset_left = 1008.0
+offset_top = 8.0
+offset_right = 1080.0
+offset_bottom = 72.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_0scu0")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_w2jb1")
+theme_override_styles/hover = SubResource("StyleBoxTexture_4850u")
+
+[node name="Control2" parent="." unique_id=1095595894 instance=ExtResource("19_p3qvb")]
+visible = false
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="Timer2" to="Area2D" method="_on_timer_2_timeout"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

@@ -6,6 +6,9 @@
 [ext_resource type="FontFile" uid="uid://s3or5fmifr8i" path="res://assets/dogica/TTF/dogicabold.ttf" id="3_rv48e"]
 [ext_resource type="Texture2D" uid="uid://bj1mwvmhkx6h7" path="res://assets/wetransfer_button-4-png_2026-03-27_0906/Button (2).png" id="5_emwwt"]
 [ext_resource type="PackedScene" uid="uid://ddpeawfaksrtl" path="res://UserInterface/cursor.tscn" id="5_qklc5"]
+[ext_resource type="AudioStream" uid="uid://dm88cxhh4oar" path="res://assets/UIClick_BLEEOOP_Baby_Click.ogg" id="7_rv48e"]
+[ext_resource type="AudioStream" uid="uid://cgr4ywtugkmon" path="res://assets/Track 4 (The Cafe).wav" id="8_p4o1h"]
+[ext_resource type="PackedScene" uid="uid://exsoxlnabw1x" path="res://UserInterface/audio.tscn" id="9_24fl3"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_iuvr8"]
 texture = ExtResource("2_8ij2a")
@@ -92,6 +95,22 @@ text = "CREDITS"
 layer = 120
 
 [node name="Sprite2D" parent="CanvasLayer" unique_id=527202148 instance=ExtResource("5_qklc5")]
+
+[node name="swstoclick" type="AudioStreamPlayer" parent="." unique_id=1119466557]
+stream = ExtResource("7_rv48e")
+volume_db = -12.0
+autoplay = true
+
+[node name="music" type="AudioStreamPlayer" parent="." unique_id=1939292091]
+stream = ExtResource("8_p4o1h")
+volume_db = -16.0
+
+[node name="TextureButton" parent="." unique_id=699205839 instance=ExtResource("9_24fl3")]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 560.0
+offset_right = 1520.0
+offset_bottom = 1360.0
 
 [connection signal="pressed" from="Panel/Button2" to="." method="_on_button_2_pressed"]
 [connection signal="pressed" from="Panel/Button" to="." method="_on_button_pressed"]

@@ -11,6 +11,8 @@
 [ext_resource type="Texture2D" uid="uid://cyyh584ukq7ol" path="res://assets/Message.png" id="9_w2372"]
 [ext_resource type="FontFile" uid="uid://s3or5fmifr8i" path="res://assets/dogica/TTF/dogicabold.ttf" id="10_djdq8"]
 [ext_resource type="Texture2D" uid="uid://dfvorlkpedlck" path="res://assets/EndGame.png" id="11_w2372"]
+[ext_resource type="AudioStream" uid="uid://dm88cxhh4oar" path="res://assets/UIClick_BLEEOOP_Baby_Click.ogg" id="12_djdq8"]
+[ext_resource type="AudioStream" uid="uid://c7j1xv84hgy6y" path="res://assets/Track 7 (Panorama).wav" id="13_ubsxs"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_eovqx"]
 texture = ExtResource("1_77rwp")
@@ -108,3 +110,12 @@ scale = Vector2(0.52522427, 0.5927686)
 texture = ExtResource("11_w2372")
 region_enabled = true
 region_rect = Rect2(609.5181, 191.57724, 669.65765, 605.9929)
+
+[node name="swstoclick" type="AudioStreamPlayer" parent="." unique_id=2024292085]
+stream = ExtResource("12_djdq8")
+volume_db = -16.0
+
+[node name="music" type="AudioStreamPlayer" parent="." unique_id=1737198288]
+stream = ExtResource("13_ubsxs")
+volume_db = -16.0
+autoplay = true
