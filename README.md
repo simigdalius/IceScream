@@ -1,8 +1,8 @@
 # 🍦 Tavern Jam - Spring '26 | IceScream
 
-![Godot Engine](https://img.shields.io/badge/Godot-4.x-blue?logo=godot-engine&logoColor=white)
-![Platform](https://img.shields.io/badge/Platform-Web%20%2F%20Desktop-orange)
-![Art](https://img.shields.io/badge/Art-Hand--drawn%20Pixelart-red)
+![Godot Engine](https://img.shields.io/badge/Godot_4.3-Blue?style=for-the-badge&logo=godotengine&logoColor=white)
+![Platform](https://img.shields.io/badge/Platform-Web%20%2F%20Desktop-orange?style=for-the-badge)
+![Art](https://img.shields.io/badge/Art-Hand--drawn%20Pixelart-red?style=for-the-badge)
 
 ## The Concept: RAGE QUIT!
 You’re just trying to get a taste of that famous **Dondurma ice cream**, but this vendor has some serious tricks up his sleeve. Can you survive the trolling and stay calm until the very end, or will you **Rage Quit** first?
