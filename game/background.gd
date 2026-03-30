@@ -52,4 +52,4 @@ func krazw(index: int):
 
 
 func _on_timer_2_timeout() -> void:
-	get_tree().call_group("rage", "remove_rage", 30.0)
+	get_tree().call_group("rage", "remove_rage", 20.0)

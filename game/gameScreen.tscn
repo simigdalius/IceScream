@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://d3qtm72c4pxg" path="res://game/spawner.tscn" id="2_rotdt"]
 [ext_resource type="PackedScene" uid="uid://c6db7y55v2p0g" path="res://game/num1.tscn" id="5_ff26b"]
 [ext_resource type="PackedScene" uid="uid://ddpeawfaksrtl" path="res://UserInterface/cursor.tscn" id="5_jlapn"]
-[ext_resource type="PackedScene" uid="uid://3tjbhqeo1ask" path="res://game/num2.tscn" id="6_37tqh"]
+[ext_resource type="PackedScene" uid="uid://c1gl632ap7hf7" path="res://game/num2.tscn" id="6_37tqh"]
 [ext_resource type="PackedScene" uid="uid://dce7t8fvaodx4" path="res://game/icescreamMan.tscn" id="6_k8nr6"]
 [ext_resource type="PackedScene" uid="uid://0fvchtuw8p7l" path="res://game/rage.tscn" id="7_hex6n"]
 [ext_resource type="PackedScene" uid="uid://c0g3elj7dho1b" path="res://game/num3.tscn" id="7_kog82"]
@@ -103,7 +103,6 @@ horizontal_alignment = 1
 [node name="Timer" type="Timer" parent="." unique_id=1118656628]
 
 [node name="Panel2" type="Panel" parent="." unique_id=1155125332]
-z_index = 2
 offset_left = 152.0
 offset_top = 8.0
 offset_right = 553.0
@@ -233,8 +232,10 @@ stream = ExtResource("14_8ml5m")
 volume_db = -12.0
 
 [node name="music" type="AudioStreamPlayer" parent="." unique_id=1486951290]
+process_mode = 3
 stream = ExtResource("16_ueske")
 volume_db = -16.0
+autoplay = true
 
 [node name="Button" type="Button" parent="." unique_id=926742002]
 process_mode = 3

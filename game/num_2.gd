@@ -1,7 +1,6 @@
 extends Sprite2D
 @onready var animated = $AnimatedSprite2D
 @onready var click = $"../../swstoclick"
-
 func _ready() -> void:
 	$AnimatedSprite2D.hide()
 

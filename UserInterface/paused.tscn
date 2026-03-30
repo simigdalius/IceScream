@@ -15,7 +15,6 @@
 [ext_resource type="PackedScene" uid="uid://exsoxlnabw1x" path="res://UserInterface/audio.tscn" id="13_b362l"]
 [ext_resource type="PackedScene" uid="uid://ddpeawfaksrtl" path="res://UserInterface/cursor.tscn" id="14_b362l"]
 [ext_resource type="AudioStream" uid="uid://dm88cxhh4oar" path="res://assets/UIClick_BLEEOOP_Baby_Click.ogg" id="15_m38a5"]
-[ext_resource type="AudioStream" uid="uid://cgr4ywtugkmon" path="res://assets/Track 4 (The Cafe).wav" id="16_6hg7l"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_knrya"]
 texture = ExtResource("4_himeq")
@@ -72,9 +71,9 @@ script = ExtResource("1_radj4")
 [node name="how to play" type="Panel" parent="." unique_id=672251781]
 layout_mode = 0
 offset_left = 64.0
-offset_top = 112.0
+offset_top = 168.0
 offset_right = 1048.0
-offset_bottom = 472.0
+offset_bottom = 528.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_knrya")
 
 [node name="Panel" type="Panel" parent="how to play" unique_id=727051028]
@@ -267,9 +266,9 @@ offset_bottom = 1000.0
 [node name="Panel2" type="Panel" parent="." unique_id=1556356874]
 layout_mode = 0
 offset_left = 344.0
-offset_top = 88.0
+offset_top = 128.0
 offset_right = 792.0
-offset_bottom = 180.0
+offset_bottom = 220.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_a8ipn")
 
 [node name="Label" type="Label" parent="Panel2" unique_id=1923774740]
@@ -294,11 +293,6 @@ layer = 120
 [node name="swstoclick" type="AudioStreamPlayer" parent="." unique_id=1686124645]
 stream = ExtResource("15_m38a5")
 volume_db = -12.0
-autoplay = true
-
-[node name="music" type="AudioStreamPlayer" parent="." unique_id=510569815]
-stream = ExtResource("16_6hg7l")
-volume_db = -16.0
 autoplay = true
 
 [connection signal="pressed" from="how to play/Button3" to="." method="_on_button_3_pressed"]

@@ -48,7 +48,7 @@ func time_up():
 	if has_node("ready"):
 		$ready.show()
 	await get_tree().create_timer(2.0).timeout
-	get_tree().change_scene_to_file("res://UserInterface/winner.tscn")
+	Scenetransition.change_scene("res://UserInterface/winner.tscn")
 	
 func screen_shake():
 	var shake_tween = create_tween()
