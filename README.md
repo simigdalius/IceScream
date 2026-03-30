@@ -4,7 +4,7 @@
 ![Platform](https://img.shields.io/badge/Platform-Web%20%2F%20Desktop-orange)
 ![Art](https://img.shields.io/badge/Art-Hand--drawn%20Pixelart-red)
 
-## 🎮 The Concept: RAGE QUIT!
+## The Concept: RAGE QUIT!
 You’re just trying to get a taste of that famous **Dondurma ice cream**, but this vendor has some serious tricks up his sleeve. Can you survive the trolling and stay calm until the very end, or will you **Rage Quit** first?
 
 **Your goal:** Try NOT to rage quit before the timer stops... Can you handle the frustration?
